@@ -16,7 +16,7 @@
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%231B3F72'/%3E%3Ctext x='90' y='125' font-size='100' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
 <title>Momentum</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Fraunces:wght@700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Fraunces:wght@700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -86,9 +86,26 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
 .modal-btn-cancel{background:var(--surface);color:var(--text);border:1.5px solid var(--border)}
 .modal-btn-confirm{background:var(--blue);color:white}
 
-/* LANDING — original classes kept for survey & other screens */
+/* LANDING */
+/* LANDING — minimal light design */
+.land-screen{background:#F0F0F5;min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0}
+.land-top{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 28px 24px}
+.land-logo{font-family:'DM Sans',sans-serif;font-size:38px;font-weight:900;letter-spacing:-1px;background:linear-gradient(135deg,var(--blue) 0%,#2EB8A0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-transform:uppercase}
+.land-tagline{font-size:14px;color:#555;line-height:1.6;text-align:center;margin-top:10px;max-width:240px}
+.land-form{width:100%;padding:28px 24px 32px}
+.land-label{font-size:13px;font-weight:600;color:#444;margin-bottom:6px;display:block}
+.land-input{width:100%;padding:14px 16px;border:1.5px solid #E2E2EC;border-radius:13px;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text);outline:none;transition:border-color .2s;margin-bottom:14px;background:white;box-sizing:border-box}
+.land-input:focus{border-color:var(--blue)}
+.land-input.err{border-color:var(--red)!important}
+.land-btn{width:100%;padding:15px;background:var(--blue);color:white;border:none;border-radius:13px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:700;cursor:pointer;margin-bottom:16px;letter-spacing:.2px}
+.land-switch{text-align:center;font-size:14px;color:#888}
+.land-switch span{color:var(--blue);font-weight:700;cursor:pointer}
+.land-forgot{text-align:center;margin-top:10px}
+.land-forgot a{font-size:13px;color:var(--blue-mid);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+/* keep old classes working */
 .hero{display:none}
-.landing-form{display:none}
+.hero-copy{display:none}
+.landing-form{padding:0}
 .flabel{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px;display:block}
 .finput{width:100%;padding:13px 15px;border:1.5px solid var(--border);border-radius:11px;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text);outline:none;transition:border-color .2s;margin-bottom:14px;background:white}
 .finput:focus{border-color:var(--blue-mid)}
@@ -98,30 +115,6 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
 .btn-s{width:100%;padding:13px;background:transparent;color:var(--blue);border:1.5px solid rgba(27,63,114,.25);border-radius:11px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer}
 .btn-s:hover{background:var(--blue-light)}
 .divtxt{text-align:center;color:var(--muted);font-size:13px;margin:8px 0 12px}
-
-/* ═══ RESTYLED LOGIN (Sora / clean modern) ═══ */
-.login-screen{background:#f2f2f7!important;min-height:100%}
-.login-wrap{min-height:100%;display:flex;flex-direction:column;justify-content:center;padding:32px 28px 40px}
-.login-logo{font-family:'Sora',sans-serif;font-size:40px;font-weight:800;letter-spacing:-1.5px;background:linear-gradient(135deg,#6c5ce7,#00b894);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;margin-bottom:6px;line-height:1.1}
-.login-sub{text-align:center;color:#5a5a72;font-size:13.5px;line-height:1.55;font-family:'Sora',sans-serif;max-width:280px;margin:0 auto 32px}
-.login-form{display:flex;flex-direction:column;gap:16px}
-.login-label{display:block;font-family:'Sora',sans-serif;font-size:11.5px;font-weight:600;color:#5a5a72;margin-bottom:5px;letter-spacing:.3px}
-.login-input{width:100%;padding:13px 15px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;font-family:'Sora',sans-serif;font-size:14px!important;color:#1a1a2e;outline:none;transition:all .2s;box-shadow:0 2px 12px rgba(0,0,0,.04);box-sizing:border-box;-webkit-appearance:none;appearance:none}
-.login-input:focus{border-color:#6c5ce7;box-shadow:0 0 0 3px rgba(108,92,231,.15)}
-.login-input::placeholder{color:#8a8aa0}
-.login-input.err{border-color:#e74c3c!important;box-shadow:0 0 0 3px rgba(231,76,60,.12)!important}
-.login-btn{width:100%;padding:14px;border:none;border-radius:12px;font-family:'Sora',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.2px;-webkit-appearance:none;appearance:none}
-.login-btn-primary{background:#6c5ce7;color:#fff;box-shadow:0 4px 16px rgba(108,92,231,.3)}
-.login-btn-primary:hover,.login-btn-primary:active{background:#7c6cf7;transform:translateY(-1px)}
-.login-link{color:#6c5ce7;cursor:pointer;font-weight:600;text-decoration:none;font-family:'Sora',sans-serif}
-.login-link:hover{text-decoration:underline;text-underline-offset:2px}
-.login-footer{text-align:center;font-size:13px;color:#5a5a72;font-family:'Sora',sans-serif;margin-top:24px}
-.login-err{font-family:'Sora',sans-serif;font-size:12px;color:#e74c3c;margin:-6px 0 4px;display:none}
-.login-forgot{text-align:center;margin-top:14px}
-#signup-section,#signin-section{animation:loginFade .25s ease}
-@keyframes loginFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-/* Restyled verify / forgot-password screen bg */
-.fp-screen{background:#f2f2f7!important}
 
 /* PREMIUM UPSELL */
 .prem-upsell{margin:0 22px 20px;background:linear-gradient(135deg,#1B3F72,#2558A8);border-radius:14px;padding:18px;color:white}
@@ -287,53 +280,37 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
 .prem-feat{font-size:12px;opacity:.88;margin-bottom:14px;line-height:1.85}
 .prem-btn{background:white;color:var(--blue);border:none;border-radius:9px;padding:9px 18px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer}
 
-/* VIDEO FEED */
-.feed-wrap{position:relative;height:100%;overflow:hidden;background:#080c10}
-.feed-track{display:flex;flex-direction:column;transition:transform .42s cubic-bezier(.4,0,.2,1)}
-.vslide{width:100%;height:656px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;flex-shrink:0;overflow:hidden}
-.vbg{position:absolute;inset:0}
-.vgrad{position:absolute;inset:0}
-.vtop{position:absolute;top:0;left:0;right:0;padding:14px 16px 0;display:flex;justify-content:space-between;align-items:center;z-index:20;background:linear-gradient(to bottom,rgba(0,0,0,.55),transparent)}
-.vlogo{font-family:'Fraunces',serif;font-size:17px;color:white}
-.vtabs{display:flex;gap:14px}
-.vtab{font-size:13px;color:rgba(255,255,255,.4);cursor:pointer;padding-bottom:2px}
-.vtab.active{color:white;font-weight:600;border-bottom:2px solid white}
-.vinfo{position:relative;z-index:10;padding:0 14px 16px;background:linear-gradient(to top,rgba(0,0,0,.9),rgba(0,0,0,.25) 55%,transparent);padding-top:80px}
-.vtag{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.13);border-radius:99px;padding:3px 11px;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:9px;color:white}
-.vdot{width:6px;height:6px;border-radius:50%}
-.friend-ach-card{position:absolute;bottom:110px;left:14px;right:60px;background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 14px;z-index:30;animation:slideInLeft .4s ease;display:none}
-.friend-ach-card.show{display:block}
-.fac-row{display:flex;align-items:center;gap:10px}
-.fac-av{width:36px;height:36px;border-radius:50%;border:2px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:13px;font-weight:700;color:white;flex-shrink:0}
-.fac-name{font-size:13px;font-weight:600;color:white}
-.fac-task{font-size:11px;color:rgba(255,255,255,.7);margin-top:1px}
-.fac-badge{font-size:11px;font-weight:700;color:white;background:rgba(26,107,74,.7);border:1px solid rgba(255,255,255,.2);padding:3px 8px;border-radius:99px;margin-top:6px;display:inline-block}
-@keyframes slideInLeft{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:translateX(0)}}
-.vcreator{display:flex;align-items:center;gap:9px;margin-bottom:7px}
-.vav{width:32px;height:32px;border-radius:50%;border:2px solid rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:12px;color:white}
-.vcname{font-size:13px;font-weight:600;color:white}
-.vcbadge{font-size:11px;color:rgba(255,255,255,.55)}
-.vcheck{color:#4FC3F7}
-.vtitle{font-family:'Fraunces',serif;font-size:18px;color:white;line-height:1.25;margin-bottom:5px}
-.vdesc{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:10px}
-.vtags2{display:flex;gap:8px;margin-bottom:10px}
-.vtag2{font-size:12px;color:rgba(255,255,255,.55)}
-.vprog{display:flex;align-items:center;gap:9px}
-.vpbar{flex:1;height:2px;background:rgba(255,255,255,.2);border-radius:99px;overflow:hidden}
-.vpfill{height:100%;border-radius:99px}
-.vtime{font-size:11px;color:rgba(255,255,255,.4)}
-.vright{position:absolute;right:10px;bottom:90px;z-index:20;display:flex;flex-direction:column;align-items:center;gap:20px}
-.vact{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
-.vcirc{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:17px;transition:background .2s}
-.vcirc:active{transform:scale(.9)}
-.vcirc.liked{background:rgba(255,60,60,.35);border-color:rgba(255,60,60,.5)}
-.vlbl{font-size:10px;color:rgba(255,255,255,.6);font-weight:500}
-.vavbtn{width:42px;height:42px;border-radius:50%;border:2px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:white;position:relative}
-.vplus{position:absolute;bottom:-5px;width:17px;height:17px;background:#E03030;border-radius:50%;border:2px solid #080c10;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white}
-.fdots{position:absolute;left:8px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:5px;z-index:20}
-.fdot{width:3px;height:3px;border-radius:99px;background:rgba(255,255,255,.25);transition:all .3s}
-.fdot.active{height:16px;background:white}
-
+/* VIDEO FEED — TIKTOK STYLE */
+.tiktok-feed{position:relative;width:100%;height:100%;background:#000;overflow:hidden}
+.tiktok-container{width:100%;height:100%;overflow:hidden;position:relative}
+.tiktok-slide{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:flex-end;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.tiktok-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.tiktok-bg-emoji{font-size:120px;opacity:.12;filter:blur(20px);transform:scale(1.5)}
+.tiktok-gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.4) 40%,rgba(0,0,0,.1) 70%,rgba(0,0,0,.3) 100%)}
+.tiktok-content{position:relative;z-index:2;width:100%;padding:0 16px 100px}
+.tiktok-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:4px 10px;font-size:11px;font-weight:700;color:white;letter-spacing:.5px;margin-bottom:10px}
+.tiktok-title{font-size:17px;font-weight:800;color:white;line-height:1.35;margin-bottom:6px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.tiktok-channel{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.tiktok-av{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#7B4FD0);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:white;flex-shrink:0;border:1.5px solid rgba(255,255,255,.3)}
+.tiktok-channel-name{font-size:13px;font-weight:600;color:rgba(255,255,255,.9)}
+.tiktok-match{font-size:12px;color:#7EB3FF;font-weight:600;margin-top:2px}
+.tiktok-watch-btn{display:inline-flex;align-items:center;gap:8px;background:white;color:#0a0a0a;border:none;border-radius:99px;padding:10px 20px;font-family:"DM Sans",sans-serif;font-size:14px;font-weight:800;cursor:pointer;margin-top:2px}
+/* Right side actions */
+.tiktok-actions{position:absolute;right:12px;bottom:120px;display:flex;flex-direction:column;align-items:center;gap:20px;z-index:3}
+.tiktok-act{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer}
+.tiktok-act-ico{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:20px;transition:transform .15s,background .15s}
+.tiktok-act-ico:active{transform:scale(.88);background:rgba(255,255,255,.25)}
+.tiktok-act-lbl{font-size:11px;color:rgba(255,255,255,.8);font-weight:600}
+.tiktok-act-ico.liked{background:rgba(255,80,80,.3);border-color:rgba(255,80,80,.5)}
+/* Top bar */
+.tiktok-topbar{position:absolute;top:0;left:0;right:0;z-index:10;padding:14px 16px 0;display:flex;align-items:center;justify-content:space-between}
+.tiktok-tabs{display:flex;gap:20px}
+.tiktok-tab{font-size:15px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;padding-bottom:6px;transition:color .2s}
+.tiktok-tab.active{color:white;border-bottom:2.5px solid white}
+/* Progress dots */
+.tiktok-dots{position:absolute;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:5px;z-index:5}
+.tiktok-dot{width:3px;border-radius:99px;background:rgba(255,255,255,.3);transition:all .3s}
+.tiktok-dot.active{background:white;height:20px!important}
 /* LEADERBOARD */
 .lb-hdr{background:var(--blue);padding:18px 20px 0}
 .lb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
@@ -400,11 +377,11 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
 .hxp{font-size:12px;font-weight:600;color:#5533B0;margin-left:auto}
 .expbtn{margin:0 20px 28px;width:calc(100% - 40px);padding:13px;background:var(--blue);color:white;border:none;border-radius:11px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px}
 .expbtn:hover{background:var(--blue-mid)}
-.code-box{width:46px;height:56px;border:1px solid rgba(0,0,0,.08);border-radius:12px;font-family:'Sora',sans-serif;font-size:24px;font-weight:700;text-align:center;color:#1a1a2e;background:white;outline:none;transition:all .2s;caret-color:transparent;box-shadow:0 2px 12px rgba(0,0,0,.04)}
-.code-box:focus{border-color:#6c5ce7;box-shadow:0 0 0 3px rgba(108,92,231,.15)}
-.code-box.filled{border-color:#6c5ce7;background:rgba(108,92,231,.06);color:#6c5ce7}
-.code-box.success{border-color:#00b894;background:rgba(0,184,148,.06);color:#00b894}
-.code-box.error{border-color:#e74c3c;background:rgba(231,76,60,.06);color:#e74c3c;animation:shake .3s ease}
+.code-box{width:46px;height:56px;border:2px solid var(--border);border-radius:12px;font-family:'Fraunces',serif;font-size:24px;font-weight:700;text-align:center;color:var(--text);background:white;outline:none;transition:border-color .2s,box-shadow .2s;caret-color:transparent}
+.code-box:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(37,88,168,.12)}
+.code-box.filled{border-color:var(--blue);background:var(--blue-light);color:var(--blue)}
+.code-box.success{border-color:var(--green);background:var(--green-light);color:var(--green)}
+.code-box.error{border-color:var(--red);background:var(--red-light);color:var(--red);animation:shake .3s ease}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 /* MEDIA UPLOAD */
 .media-section{padding:0 20px 20px}
@@ -628,10 +605,10 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
 .ai-chat-send:disabled{opacity:.4}
 /* FORGOT PASSWORD */
 .fp-wrap{min-height:100%;display:flex;flex-direction:column;padding:28px 28px 40px;position:relative}
-.fp-back{background:none;border:none;font-family:'Sora',sans-serif;font-size:13px;color:#5a5a72;cursor:pointer;padding:0;text-align:left;margin-bottom:28px;display:flex;align-items:center;gap:4px}
+.fp-back{background:none;border:none;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--muted);cursor:pointer;padding:0;text-align:left;margin-bottom:28px;display:flex;align-items:center;gap:4px}
 .fp-icon{font-size:44px;margin-bottom:16px}
-.fp-title{font-family:'Sora',sans-serif;font-size:24px;font-weight:800;margin-bottom:8px;color:#1a1a2e;letter-spacing:-.5px}
-.fp-sub{font-size:14px;color:#5a5a72;line-height:1.65;margin-bottom:24px;font-family:'Sora',sans-serif}
+.fp-title{font-family:'Fraunces',serif;font-size:26px;margin-bottom:8px}
+.fp-sub{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:24px}
 .streak-fire-overlay{position:absolute;inset:0;z-index:900;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);background:rgba(0,0,0,.55)}
 .streak-fire-overlay.show{opacity:1;pointer-events:all}
 #fire-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
@@ -795,88 +772,69 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
   <div class="app-body">
 
     <!-- LANDING -->
-    <div class="screen active login-screen" id="s-land">
-      <div class="login-wrap">
-        <div style="text-align:center;margin-bottom:28px">
-          <div class="login-logo">MOMENTUM</div>
-          <div class="login-sub">Turn ambition into verified achievements.<br>One challenge at a time.</div>
+    <div class="screen active" id="s-land">
+      <div class="land-screen">
+
+        <!-- Logo + tagline -->
+        <div class="land-top">
+          <div class="land-logo">Momentum</div>
+          <div class="land-tagline">Turn ambition into verified achievements.<br>One challenge at a time.</div>
         </div>
 
-        <!-- SIGN UP FORM -->
-        <div id="signup-section">
-          <div class="login-form">
-            <div>
-              <label class="login-label">Full Name</label>
-              <input class="login-input" id="inp-name" type="text" placeholder="First and Last"/>
-            </div>
-            <div>
-              <label class="login-label">Email</label>
-              <input class="login-input" id="inp-email" type="email" placeholder="you@example.com"/>
-            </div>
-            <div>
-              <label class="login-label">Password</label>
-              <input class="login-input" id="inp-pass" type="password" placeholder="Create a password"/>
-            </div>
-            <div>
-              <label class="login-label">Confirm Password</label>
-              <input class="login-input" id="inp-pass2" type="password" placeholder="Repeat your password"/>
-            </div>
-            <div id="pass-err" class="login-err">Passwords do not match</div>
-            <div id="name-err" class="login-err">Please enter your name</div>
-            <button class="login-btn login-btn-primary" onclick="handleSignUp()">Create Account</button>
-          </div>
-          <div class="login-footer">
-            Already have an account? <a class="login-link" onclick="toggleLoginMode('signin')">Sign in</a>
-          </div>
+        <!-- Sign In form (default, matches screenshot) -->
+        <div class="land-form" id="land-signin-form">
+          <label class="land-label">Email</label>
+          <input class="land-input" id="signin-email" type="email" placeholder="you@example.com"/>
+          <label class="land-label">Password</label>
+          <input class="land-input" id="signin-pass" type="password" placeholder="••••••••"/>
+          <div id="signin-err" style="font-size:12px;color:var(--red);margin:-10px 0 12px;display:none">⚠ Incorrect email or password.</div>
+          <button class="land-btn" onclick="handleSignIn()">Sign In</button>
+          <div class="land-switch">Don't have an account? <span onclick="showLandSignup()">Sign up</span></div>
+          <div class="land-forgot"><a onclick="go('s-forgot')">Forgot password?</a></div>
         </div>
 
-        <!-- SIGN IN FORM -->
-        <div id="signin-section" style="display:none">
-          <div class="login-form">
-            <div>
-              <label class="login-label">Email</label>
-              <input class="login-input" id="signin-email" type="email" placeholder="you@example.com"/>
-            </div>
-            <div>
-              <label class="login-label">Password</label>
-              <input class="login-input" id="signin-pass" type="password" placeholder="Your password"/>
-            </div>
-            <div id="signin-err" class="login-err">No account found. Please sign up.</div>
-            <button class="login-btn login-btn-primary" onclick="handleSignIn()">Sign In</button>
-          </div>
-          <div class="login-forgot">
-            <a class="login-link" onclick="go('s-forgot')" style="font-size:13px">Forgot password?</a>
-          </div>
-          <div class="login-footer">
-            Don't have an account? <a class="login-link" onclick="toggleLoginMode('signup')">Sign up</a>
-          </div>
+        <!-- Sign Up form (hidden by default) -->
+        <div class="land-form" id="land-signup-form" style="display:none">
+          <label class="land-label">Full Name</label>
+          <input class="land-input" id="inp-name" type="text" placeholder="First and Last"/>
+          <label class="land-label">Email Address</label>
+          <input class="land-input" id="inp-email" type="email" placeholder="you@example.com"/>
+          <label class="land-label">Password</label>
+          <input class="land-input" id="inp-pass" type="password" placeholder="Create a password"/>
+          <label class="land-label">Confirm Password</label>
+          <input class="land-input" id="inp-pass2" type="password" placeholder="Repeat your password"/>
+          <div id="pass-err" style="font-size:12px;color:var(--red);margin:-10px 0 12px;display:none">⚠ Passwords do not match</div>
+          <div id="name-err" style="font-size:12px;color:var(--red);margin:-10px 0 12px;display:none">⚠ Please enter your name</div>
+          <button class="land-btn" onclick="handleSignUp()">Create Account</button>
+          <div class="land-switch">Already have an account? <span onclick="showLandSignin()">Sign in</span></div>
         </div>
+
       </div>
     </div>
 
 
     <!-- FORGOT PASSWORD — STEP 1: Enter email -->
-    <div class="screen fp-screen" id="s-forgot">
+    <div class="screen" id="s-forgot">
       <div class="fp-wrap">
         <button class="fp-back" onclick="go('s-land')">← Back</button>
         <div class="fp-icon">🔑</div>
         <div class="fp-title">Forgot password?</div>
         <div class="fp-sub">Enter the email address linked to your account and we'll send you a reset code.</div>
-        <label class="login-label">Email address</label>
-        <input class="login-input" id="fp-email" type="email" placeholder="you@example.com" style="margin-bottom:16px"/>
-        <div id="fp-err" class="login-err">Please enter a valid email address.</div>
-        <button class="login-btn login-btn-primary" onclick="sendResetCode()">Send reset code</button>
+        <label class="flabel">Email address</label>
+        <input class="finput" id="fp-email" type="email" placeholder="you@example.com"/>
+        <div id="fp-err" style="font-size:12px;color:var(--red);margin:-8px 0 10px;display:none">⚠ Please enter a valid email address.</div>
+        <button class="btn-p" onclick="sendResetCode()">Send reset code →</button>
       </div>
     </div>
 
     <!-- FORGOT PASSWORD — STEP 2: Enter code -->
-    <div class="screen fp-screen" id="s-reset-code">
+    <div class="screen" id="s-reset-code">
       <div class="fp-wrap" style="text-align:center">
-        <button class="fp-back" onclick="go('s-forgot')" style="margin-right:auto">← Back</button>
+        <button class="fp-back" onclick="go('s-forgot')">← Back</button>
         <div class="fp-icon">📬</div>
         <div class="fp-title">Check your email</div>
-        <div class="fp-sub" style="margin-bottom:8px">We sent a 6-digit code to</div>
-        <div id="fp-email-display" style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:#1a1a2e;margin-bottom:24px"></div>
+        <div class="fp-sub">We sent a 6-digit code to</div>
+        <div id="fp-email-display" style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:24px"></div>
         <div style="display:flex;gap:10px;justify-content:center;margin-bottom:24px">
           <input class="code-box" id="r0" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" oninput="handleResetCode(this,0)" onkeydown="resetKeyDown(event,0)"/>
           <input class="code-box" id="r1" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" oninput="handleResetCode(this,1)" onkeydown="resetKeyDown(event,1)"/>
@@ -885,41 +843,41 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
           <input class="code-box" id="r4" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" oninput="handleResetCode(this,4)" onkeydown="resetKeyDown(event,4)"/>
           <input class="code-box" id="r5" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" oninput="handleResetCode(this,5)" onkeydown="resetKeyDown(event,5)"/>
         </div>
-        <div id="reset-code-err" style="font-family:'Sora',sans-serif;font-size:13px;color:#e74c3c;margin-bottom:14px;display:none">Incorrect code. Please try again.</div>
-        <button class="login-btn login-btn-primary" style="max-width:280px;margin:0 auto" onclick="verifyResetCode()">Verify code</button>
-        <div style="margin-top:16px;font-size:13px;color:#5a5a72;font-family:'Sora',sans-serif">
+        <div id="reset-code-err" style="font-size:13px;color:var(--red);margin-bottom:14px;display:none">⚠ Incorrect code. Please try again.</div>
+        <button class="btn-p" style="max-width:280px" onclick="verifyResetCode()">Verify code →</button>
+        <div style="margin-top:16px;font-size:13px;color:var(--muted)">
           Didn't receive it?
-          <a class="login-link" onclick="resendResetCode()" style="font-size:13px">Resend code</a>
+          <span onclick="resendResetCode()" style="color:var(--blue-mid);cursor:pointer;font-weight:500;text-decoration:underline;text-underline-offset:2px">Resend code</span>
         </div>
-        <div style="margin-top:8px;font-size:12px;color:#8a8aa0;background:white;border-radius:10px;padding:8px 14px;display:inline-block;font-family:'Sora',sans-serif;border:1px solid rgba(0,0,0,.06);box-shadow:0 2px 8px rgba(0,0,0,.03)">Demo: use code <b style="color:#6c5ce7">123456</b></div>
+        <div style="margin-top:8px;font-size:12px;color:var(--muted);background:var(--surface);border-radius:8px;padding:6px 12px;display:inline-block">Demo: use code <b>123456</b></div>
       </div>
     </div>
 
     <!-- FORGOT PASSWORD — STEP 3: New password -->
-    <div class="screen fp-screen" id="s-new-pass">
+    <div class="screen" id="s-new-pass">
       <div class="fp-wrap">
         <div class="fp-icon">🔒</div>
         <div class="fp-title">New password</div>
         <div class="fp-sub">Choose a strong password for your account.</div>
-        <label class="login-label">New password</label>
-        <input class="login-input" id="np-pass" type="password" placeholder="Create new password" style="margin-bottom:16px"/>
-        <label class="login-label">Confirm new password</label>
-        <input class="login-input" id="np-pass2" type="password" placeholder="Repeat new password" style="margin-bottom:16px"/>
-        <div id="np-err" class="login-err">Passwords do not match.</div>
-        <div id="np-weak" class="login-err">Password must be at least 8 characters.</div>
-        <button class="login-btn login-btn-primary" onclick="saveNewPassword()">Save new password</button>
+        <label class="flabel">New password</label>
+        <input class="finput" id="np-pass" type="password" placeholder="Create new password"/>
+        <label class="flabel">Confirm new password</label>
+        <input class="finput" id="np-pass2" type="password" placeholder="Repeat new password"/>
+        <div id="np-err" style="font-size:12px;color:var(--red);margin:-8px 0 10px;display:none">⚠ Passwords do not match.</div>
+        <div id="np-weak" style="font-size:12px;color:var(--red);margin:-8px 0 10px;display:none">⚠ Password must be at least 8 characters.</div>
+        <button class="btn-p" onclick="saveNewPassword()">Save new password →</button>
       </div>
     </div>
 
     <!-- EMAIL VERIFICATION -->
-    <div class="screen fp-screen" id="s-verify">
+    <div class="screen" id="s-verify">
       <div style="min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;text-align:center">
-        <div style="width:80px;height:80px;background:rgba(108,92,231,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <div style="width:80px;height:80px;background:var(--blue-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
-        <div style="font-family:'Sora',sans-serif;font-size:24px;font-weight:800;margin-bottom:8px;color:#1a1a2e;letter-spacing:-.5px">Check your email</div>
-        <div style="font-family:'Sora',sans-serif;font-size:14px;color:#5a5a72;line-height:1.7;margin-bottom:6px">We sent a 6-digit code to</div>
-        <div id="verify-email-display" style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:#1a1a2e;margin-bottom:28px"></div>
+        <div style="font-family:'Fraunces',serif;font-size:26px;margin-bottom:8px">Check your email</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:6px">We sent a 6-digit code to</div>
+        <div id="verify-email-display" style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:28px"></div>
 
         <!-- Code input boxes -->
         <div style="display:flex;gap:10px;justify-content:center;margin-bottom:24px">
@@ -931,24 +889,24 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
           <input class="code-box" id="c5" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" oninput="handleCode(this,5)" onkeydown="codeKeyDown(event,5)"/>
         </div>
 
-        <div id="verify-err" style="font-family:'Sora',sans-serif;font-size:13px;color:#e74c3c;margin-bottom:14px;display:none">Incorrect code. Please try again.</div>
-        <div id="verify-success" style="font-family:'Sora',sans-serif;font-size:13px;color:#00b894;margin-bottom:14px;display:none;align-items:center;gap:6px">✓ Email verified!</div>
+        <div id="verify-err" style="font-size:13px;color:var(--red);margin-bottom:14px;display:none">⚠ Incorrect code. Please try again.</div>
+        <div id="verify-success" style="font-size:13px;color:var(--green);margin-bottom:14px;display:none;align-items:center;gap:6px">✓ Email verified!</div>
 
-        <button class="login-btn login-btn-primary" style="max-width:280px" onclick="verifyCode()">Verify Email</button>
+        <button class="btn-p" style="max-width:280px" onclick="verifyCode()">Verify Email →</button>
 
-        <div style="margin-top:18px;font-size:13px;color:#5a5a72;font-family:'Sora',sans-serif">
+        <div style="margin-top:18px;font-size:13px;color:var(--muted)">
           Didn't receive it?
-          <span id="resend-btn" onclick="resendCode()" class="login-link" style="font-size:13px">Resend code</span>
-          <span id="resend-timer" style="color:#8a8aa0;display:none"></span>
+          <span id="resend-btn" onclick="resendCode()" style="color:var(--blue-mid);cursor:pointer;font-weight:500;text-decoration:underline;text-underline-offset:2px">Resend code</span>
+          <span id="resend-timer" style="color:var(--muted);display:none"></span>
         </div>
         <div style="margin-top:10px">
-          <a class="login-link" onclick="go('s-land')" style="font-size:12px;font-weight:500;color:#8a8aa0">← Back to sign up</a>
+          <span onclick="go('s-land')" style="font-size:12px;color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:2px">← Back to sign up</span>
         </div>
 
         <!-- Demo hint -->
-        <div style="margin-top:28px;background:white;border-radius:12px;padding:14px 18px;border:1px solid rgba(0,0,0,.06);font-size:12px;color:#5a5a72;line-height:1.6;max-width:280px;font-family:'Sora',sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.04)">
-          <span style="font-weight:700;color:#1a1a2e">Demo mode:</span> your code is shown below.
-          <div id="demo-code-display" style="font-family:'Sora',sans-serif;font-size:22px;color:#6c5ce7;font-weight:700;margin-top:6px;letter-spacing:4px"></div>
+        <div style="margin-top:28px;background:var(--surface);border-radius:10px;padding:12px 16px;border:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.6;max-width:280px">
+          <span style="font-weight:600;color:var(--text)">Demo mode:</span> your code is shown in the banner below. In production this would be sent to your real email.
+          <div id="demo-code-display" style="font-family:'Fraunces',serif;font-size:22px;color:var(--blue);font-weight:700;margin-top:6px;letter-spacing:4px"></div>
         </div>
       </div>
     </div>
@@ -993,13 +951,13 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
             <div id="goal-suggestions-list" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px"></div>
             <div style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Things to work on</div>
             <div id="goal-growth-list" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px"></div>
-            <!-- Recommended challenges based on goals -->
-            <div id="rec-challenges-wrap" style="display:none">
-              <div style="height:1px;background:var(--border);margin-bottom:16px"></div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Recommended challenges</div>
-              <div style="font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5" id="rec-challenges-sub">Based on what you want to achieve, these challenges will put you ahead.</div>
-              <div id="rec-challenges-list" style="display:flex;flex-direction:column;gap:9px"></div>
-            </div>
+          </div>
+          <!-- Recommended challenges based on goals -->
+          <div id="rec-challenges-wrap" style="display:none">
+            <div style="height:1px;background:var(--border);margin-bottom:16px"></div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Recommended challenges</div>
+            <div style="font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5" id="rec-challenges-sub">Based on what you want to achieve, these challenges will put you ahead.</div>
+            <div id="rec-challenges-list" style="display:flex;flex-direction:column;gap:9px"></div>
           </div>
         </div>
         <div id="sq4" style="display:none">
@@ -1248,80 +1206,152 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
     </div>
 
     <!-- VIDEO FEED -->
-    <div class="screen" id="s-feed" style="padding:0">
-      <div class="feed-wrap" id="fw">
-        <div class="feed-track" id="ft">
-          <div class="vslide">
-            <div class="vbg"><div class="vgrad" style="background:linear-gradient(145deg,#0d2137,#1B3F72 45%,#0d3026)"></div></div>
-            <div class="vtop"><div class="vlogo">Momentum</div><div class="vtabs"><div class="vtab">Following</div><div class="vtab active">For You</div></div></div>
-            <div id="fac0" class="friend-ach-card"><div class="fac-row"><div class="fac-av" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div><div><div class="fac-name">Sarah Lin just finished 🎉</div><div class="fac-task">Upgraded LinkedIn Profile</div></div></div><div class="fac-badge">✔ Verified · +350 XP</div></div>
-            <div class="vright">
-              <div class="vact"><div class="vavbtn" style="background:linear-gradient(135deg,#1B3F72,#2558A8)">SL<div class="vplus">+</div></div></div>
-              <div class="vact" onclick="vlike(this)"><div class="vcirc" data-n="4200">❤️</div><div class="vlbl">4.2k</div></div>
-              <div class="vact" onclick="vsave(this)"><div class="vcirc">🔖</div><div class="vlbl">Save</div></div>
-              <div class="vact" onclick="toast('⚡ Added to deck!')"><div class="vcirc">⚡</div><div class="vlbl">Challenge</div></div>
-              <div class="vact" onclick="toast('Sharing...')"><div class="vcirc">↗</div><div class="vlbl">Share</div></div>
-            </div>
-            <div class="vinfo">
-              <div class="vtag"><div class="vdot" style="background:#4FC3F7"></div>LinkedIn · Professional</div>
-              <div class="vcreator"><div class="vav" style="background:linear-gradient(135deg,#1B3F72,#2558A8)">SL</div><div><div class="vcname">Sarah Lin <span class="vcheck">✔</span></div><div class="vcbadge">LinkedIn Challenge · Top 8%</div></div></div>
-              <div class="vtitle">How I rewrote my LinkedIn headline and got 3 recruiter DMs in a week</div>
-              <div class="vdesc">The exact formula — and why "results-driven professional" is killing your chances.</div>
-              <div class="vtags2"><span class="vtag2">#LinkedIn</span><span class="vtag2">#CareerTips</span><span class="vtag2">#Momentum</span></div>
-              <div class="vprog"><div class="vpbar"><div class="vpfill" style="width:38%;background:linear-gradient(90deg,#2558A8,#4FC3F7)"></div></div><div class="vtime">1:24</div></div>
-            </div>
+    <div class="screen" id="s-feed" style="background:#F0F0F5">
+      <div style="padding:24px 20px 0;background:#F0F0F5">
+
+        <!-- Welcome header -->
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:2px" id="home-greeting-label">TODAY</div>
+            <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#0f1923;line-height:1.3" id="home-name">there</div>
           </div>
-          <div class="vslide">
-            <div class="vbg"><div class="vgrad" style="background:linear-gradient(145deg,#1a0a00,#5a2a00 45%,#2a1500)"></div></div>
-            <div class="vtop"><div class="vlogo">Momentum</div><div class="vtabs"><div class="vtab">Following</div><div class="vtab active">For You</div></div></div>
-            <div id="fac1" class="friend-ach-card"><div class="fac-row"><div class="fac-av" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">MR</div><div><div class="fac-name">Marcus Reed just finished 🎉</div><div class="fac-task">Built a Car Detailing Business</div></div></div><div class="fac-badge">✔ Verified · $1,240 earned</div></div>
-            <div class="vright">
-              <div class="vact"><div class="vavbtn" style="background:linear-gradient(135deg,#8B4513,#D06229)">MR<div class="vplus">+</div></div></div>
-              <div class="vact" onclick="vlike(this)"><div class="vcirc" data-n="11800">❤️</div><div class="vlbl">11.8k</div></div>
-              <div class="vact" onclick="vsave(this)"><div class="vcirc">🔖</div><div class="vlbl">Save</div></div>
-              <div class="vact" onclick="toast('⚡ Added to deck!')"><div class="vcirc">⚡</div><div class="vlbl">Challenge</div></div>
-              <div class="vact" onclick="toast('Sharing...')"><div class="vcirc">↗</div><div class="vlbl">Share</div></div>
-            </div>
-            <div class="vinfo">
-              <div class="vtag"><div class="vdot" style="background:#F5A623"></div>Business · Side Hustle</div>
-              <div class="vcreator"><div class="vav" style="background:linear-gradient(135deg,#8B4513,#D06229)">MR</div><div><div class="vcname">Marcus Reed <span class="vcheck">✔</span></div><div class="vcbadge">Side Hustle · $1,240 earned</div></div></div>
-              <div class="vtitle">Week 1 of my car detailing business — exactly what happened</div>
-              <div class="vdesc">Started with $80. By day 7 I had 11 paying customers. The script that worked.</div>
-              <div class="vtags2"><span class="vtag2">#SideHustle</span><span class="vtag2">#Entrepreneurship</span><span class="vtag2">#Momentum</span></div>
-              <div class="vprog"><div class="vpbar"><div class="vpfill" style="width:61%;background:linear-gradient(90deg,#D06229,#F5C842)"></div></div><div class="vtime">2:47</div></div>
-            </div>
+          <button onclick="purchasePremium()" id="home-upgrade-btn" style="background:white;border:1.5px solid var(--border);border-radius:99px;padding:8px 18px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#0f1923;cursor:pointer">Upgrade</button>
+        </div>
+
+        <!-- Level card -->
+        <div style="background:white;border-radius:16px;padding:16px 18px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.05)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue)" id="home-level-label">LEVEL 1</div>
+            <div style="font-size:22px;font-weight:800;color:var(--blue);font-family:'Fraunces',serif" id="home-xp-display">0 XP</div>
           </div>
-          <div class="vslide">
-            <div class="vbg"><div class="vgrad" style="background:linear-gradient(145deg,#0a1a10,#1A6B4A 45%,#0f2535)"></div></div>
-            <div class="vtop"><div class="vlogo">Momentum</div><div class="vtabs"><div class="vtab">Following</div><div class="vtab active">For You</div></div></div>
-            <div id="fac2" class="friend-ach-card"><div class="fac-row"><div class="fac-av" style="background:linear-gradient(135deg,#4a1d8a,#7B4FD0)">AK</div><div><div class="fac-name">Aisha Kim just finished 🎉</div><div class="fac-task">3 Informational Interviews</div></div></div><div class="fac-badge">✔ Verified · +400 XP</div></div>
-            <div class="vright">
-              <div class="vact"><div class="vavbtn" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">AK<div class="vplus">+</div></div></div>
-              <div class="vact" onclick="vlike(this)"><div class="vcirc" data-n="7600">❤️</div><div class="vlbl">7.6k</div></div>
-              <div class="vact" onclick="vsave(this)"><div class="vcirc">🔖</div><div class="vlbl">Save</div></div>
-              <div class="vact" onclick="toast('⚡ Added to deck!')"><div class="vcirc">⚡</div><div class="vlbl">Challenge</div></div>
-              <div class="vact" onclick="toast('Sharing...')"><div class="vcirc">↗</div><div class="vlbl">Share</div></div>
-            </div>
-            <div class="vinfo">
-              <div class="vtag"><div class="vdot" style="background:#2DA86F"></div>Networking · Career</div>
-              <div class="vcreator"><div class="vav" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">AK</div><div><div class="vcname">Aisha Kim <span class="vcheck">✔</span></div><div class="vcbadge">Networking Challenge · Top 5%</div></div></div>
-              <div class="vtitle">Cold message that got me 3 interviews in 48 hours</div>
-              <div class="vdesc">Most people make one mistake reaching out on LinkedIn. Here's what to say instead.</div>
-              <div class="vtags2"><span class="vtag2">#Networking</span><span class="vtag2">#JobSearch</span><span class="vtag2">#Momentum</span></div>
-              <div class="vprog"><div class="vpbar"><div class="vpfill" style="width:22%;background:linear-gradient(90deg,#1A6B4A,#2DA86F)"></div></div><div class="vtime">0:52</div></div>
-            </div>
+          <div style="font-size:18px;font-weight:700;color:#0f1923;margin-bottom:10px" id="home-level-name">Rookie</div>
+          <div style="background:#EEEEF5;border-radius:99px;height:7px;overflow:hidden;margin-bottom:6px">
+            <div id="home-level-bar" style="height:100%;background:linear-gradient(90deg,var(--blue),#7B4FD0);border-radius:99px;width:0%;transition:width .6s cubic-bezier(.34,1.56,.64,1)"></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);text-align:right" id="home-level-next">100 XP to Level 2</div>
+        </div>
+
+        <!-- Streak claim card (inline) -->
+        <div id="home-streak-card" style="background:#FFF8EE;border:1.5px solid #F5C842;border-radius:16px;padding:14px 16px;margin-bottom:12px;display:none;align-items:center;gap:12px;box-shadow:0 2px 8px rgba(245,200,66,.15)">
+          <div style="font-size:28px;line-height:1">🔥</div>
+          <div style="flex:1">
+            <div style="font-size:20px;font-weight:800;color:#C9973A;font-family:'Fraunces',serif">Day <span id="home-streak-day">1</span></div>
+            <div style="font-size:12px;color:#A07830;margin-top:1px">Claim your streak</div>
+          </div>
+          <button onclick="claimStreakHome()" style="background:#F5A623;color:white;border:none;border-radius:12px;padding:11px 22px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:800;cursor:pointer">Claim</button>
+        </div>
+
+        <!-- 4 Stat tiles -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+          <div style="background:white;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+            <div style="font-size:28px;font-weight:800;color:#0f1923;font-family:'Fraunces',serif" id="home-stat-completed">0</div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:3px">Completed</div>
+          </div>
+          <div style="background:white;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+            <div style="font-size:28px;font-weight:800;color:#0f1923;font-family:'Fraunces',serif" id="home-stat-streak">0</div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:3px">Day Streak</div>
+          </div>
+          <div style="background:white;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+            <div style="font-size:28px;font-weight:800;color:#0f1923;font-family:'Fraunces',serif" id="home-stat-freezes">0</div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:3px">Freezes</div>
+          </div>
+          <div style="background:white;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+            <div style="font-size:28px;font-weight:800;color:#0f1923;font-family:'Fraunces',serif" id="home-stat-rate">0%</div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:3px">Success Rate</div>
           </div>
         </div>
-        <div class="fdots" id="fdots"><div class="fdot active"></div><div class="fdot"></div><div class="fdot"></div></div>
+
+        <!-- Active Challenge card -->
+        <div style="margin-bottom:8px">
+          <div style="font-size:18px;font-weight:800;color:#0f1923;margin-bottom:10px">Active Challenge</div>
+          <!-- No challenge state -->
+          <div id="home-no-challenge" style="background:white;border-radius:16px;padding:20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+            <div style="font-size:32px;margin-bottom:8px">⚡</div>
+            <div style="font-size:14px;font-weight:600;color:#0f1923;margin-bottom:4px">No active challenge</div>
+            <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Pick a challenge and start building momentum</div>
+            <button onclick="navGoSwipe()" style="background:var(--blue);color:white;border:none;border-radius:11px;padding:11px 24px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer">Browse Challenges</button>
+          </div>
+          <!-- Active challenge state -->
+          <div id="home-active-challenge" style="background:white;border-radius:16px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.04);display:none">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+              <div id="home-ch-cat" style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue);background:var(--blue-light);padding:3px 10px;border-radius:99px">Category</div>
+              <div id="home-ch-diff" style="font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;background:#FDE8E8;color:#A02020">Hard</div>
+            </div>
+            <div id="home-ch-title" style="font-size:17px;font-weight:700;color:#0f1923;margin-bottom:4px">Challenge Name</div>
+            <div id="home-ch-meta" style="font-size:12px;color:var(--muted);margin-bottom:14px">3–5 days · 350 XP</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <div style="font-size:12px;color:var(--muted)">Progress</div>
+              <div id="home-ch-steps" style="font-size:12px;font-weight:700;color:var(--blue)">0/8 steps</div>
+            </div>
+            <div style="background:#EEEEF5;border-radius:99px;height:5px;overflow:hidden;margin-bottom:14px">
+              <div id="home-ch-bar" style="height:100%;background:linear-gradient(90deg,var(--blue),#7B4FD0);border-radius:99px;width:0%;transition:width .4s"></div>
+            </div>
+            <button onclick="navGo('s-roadmap','nb-road')" style="width:100%;background:none;border:none;color:var(--blue);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;padding:0;text-align:center">Continue →</button>
+          </div>
+        </div>
+
+        <div style="height:24px"></div>
+      </div>
+    </div>
+
+    <!-- VIDEO FEED -->
+    <div class="screen" id="s-videos" style="overflow:hidden;padding:0">
+      <div class="tiktok-feed" id="tiktok-feed">
+
+        <!-- Top bar -->
+        <div class="tiktok-topbar">
+          <div class="tiktok-tabs">
+            <div class="tiktok-tab" onclick="setTikTokTab('following',this)">Following</div>
+            <div class="tiktok-tab active" onclick="setTikTokTab('foryou',this)">For You</div>
+          </div>
+          <div style="font-size:20px;cursor:pointer" onclick="refreshVideoFeed()">🔍</div>
+        </div>
+
+        <!-- Slides container -->
+        <div class="tiktok-container" id="tk-container">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Progress dots -->
+        <div class="tiktok-dots" id="tk-dots"></div>
+
+        <!-- Right actions -->
+        <div class="tiktok-actions" id="tk-actions">
+          <div class="tiktok-act" onclick="tkLike(this)">
+            <div class="tiktok-act-ico" id="tk-like-ico">❤️</div>
+            <div class="tiktok-act-lbl" id="tk-like-lbl">4.2k</div>
+          </div>
+          <div class="tiktok-act" onclick="tkSave()">
+            <div class="tiktok-act-ico">🔖</div>
+            <div class="tiktok-act-lbl">Save</div>
+          </div>
+          <div class="tiktok-act" onclick="tkChallenge()">
+            <div class="tiktok-act-ico">⚡</div>
+            <div class="tiktok-act-lbl">Challenge</div>
+          </div>
+          <div class="tiktok-act" onclick="toast('Sharing…')">
+            <div class="tiktok-act-ico">↗</div>
+            <div class="tiktok-act-lbl">Share</div>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- LEADERBOARD -->
     <div class="screen" id="s-lb">
       <div class="lb-hdr">
-        <div class="lb-top"><div class="lbtitle">Leaderboard</div><div class="lbperiod" onclick="cyclePeriod(this)">This Month ▾</div></div>
-        <div class="lb-tabs"><div class="lbtab active" onclick="setLBScope(this,'global')">Global</div><div class="lbtab" onclick="setLBScope(this,'city')">City</div><div class="lbtab" onclick="setLBScope(this,'uni')">University</div></div>
+        <div class="lb-top"><div class="lbtitle">Rankings</div><div class="lbperiod" onclick="cyclePeriod(this)">This Month ▾</div></div>
+        <div class="lb-tabs">
+          <div class="lbtab active" onclick="setLBScope(this,'global')">Global</div>
+          <div class="lbtab" onclick="setLBScope(this,'city')">City</div>
+          <div class="lbtab" onclick="setLBScope(this,'uni')">University</div>
+          <div class="lbtab" onclick="setLBScope(this,'squad')">Squad</div>
+        </div>
       </div>
+
+      <!-- LEADERBOARD PANEL -->
+      <div id="lb-panel">
       <div class="myrank"><div class="mrav">OF</div><div class="mrinf"><div class="mrlbl">Your ranking</div><div class="mrname">Owen Field</div><div class="mrsub">1,450 XP · 🔥 14-day streak</div><div class="mrprow"><div class="mrb"><div class="mrf"></div></div><div class="mrbll">550 XP to #100</div></div></div><div class="mrnum"><div class="mrn2" id="my-rank-num">#142</div><div class="mrl2" id="my-rank-scope">Global</div></div></div>
       <div class="sechead">Top Performers</div>
       <div class="podwrap">
@@ -1331,7 +1361,178 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
       </div>
       <div class="sechead">Rankings</div>
       <div id="lb-list"></div>
-    </div>
+      </div><!-- end lb-panel -->
+
+      <!-- SQUAD PANEL (shown when Squad tab selected) -->
+      <div id="squad-panel" style="display:none">
+      <div class="sq-hdr">
+        <div class="sq-top"><div class="sqtitle">Squad</div><button class="addbtn" onclick="toast('✉ Invite link copied!')">+ Add Friends</button></div>
+        <div class="sq-tabs">
+          <div class="sqtab active" onclick="sqTab(this,'sqf')">Friends</div>
+          <div class="sqtab" onclick="sqTab(this,'sqa')">Activity</div>
+          <div class="sqtab" onclick="sqTab(this,'sqc')">Compete</div>
+        </div>
+      </div>
+
+      <!-- FRIENDS TAB -->
+      <div id="sqf">
+        <div class="sechead" style="padding:14px 20px 8px">Your challenge</div>
+        <div class="mcbanner"><div class="mcbico" id="mc-ico">💼</div><div class="mcbinf"><div class="mcblbl">Active</div><div class="mcbtit" id="mc-title">—</div><div class="mcbprow"><div class="mcbbar"><div class="mcbfill" id="mc-fill" style="width:40%"></div></div><div class="mcbpct" id="mc-pct">40%</div></div></div><div class="mcbst"><div class="mcbsn">🔥14</div><div class="mcbsl">Day streak</div></div></div>
+
+
+        <!-- Live H2H progress -->
+        <div class="h2h-live-card" id="h2h-live-card" style="display:none">
+          <div class="h2h-live-top">
+            <div class="h2h-live-ttl">Live match vs Sarah Lin</div>
+            <div class="h2h-live-badge">⚡ LIVE</div>
+          </div>
+          <div class="h2h-row"><div class="h2h-row-av" style="background:linear-gradient(135deg,#1B3F72,#2558A8)">OF</div><div class="h2h-row-name">You</div><div class="h2h-bar-wrap"><div class="h2h-bar-fill" style="width:40%;background:var(--blue)"></div></div><div class="h2h-row-pct" style="color:var(--blue)">40%</div></div>
+          <div class="h2h-row"><div class="h2h-row-av" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div><div class="h2h-row-name">Sarah</div><div class="h2h-bar-wrap"><div class="h2h-bar-fill" style="width:62%;background:var(--gold)"></div></div><div class="h2h-row-pct" style="color:var(--gold)">62%</div></div>
+        </div>
+
+        <div class="sechead" style="margin-top:14px">Friends <span style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">· tap to expand</span></div>
+        <div class="flist">
+          <div class="fcard" id="fc1">
+            <div class="ftop" onclick="expandF('fc1')">
+              <div class="fav2" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL<div class="odot"></div></div>
+              <div class="finf2">
+                <div class="fnrow"><div class="fn">Sarah Lin</div></div>
+                <div class="ftask">💼 Building a Side Hustle</div>
+                <div class="fprow"><div class="fbar2"><div class="ffill" style="width:72%;background:var(--gold)"></div></div><div class="fpct">72%</div></div>
+              </div>
+              <div class="fright"><div class="fstreak">🔥 31d</div><div class="frankcip" style="background:var(--gold-light);color:var(--gold)">#1 Global</div></div>
+            </div>
+            <div class="factions" id="fa1">
+              <button class="fabtn" onclick="toast('👏 Sent!')">
+                <span>👏</span><span>Encourage</span>
+              </button>
+              <button class="fabtn" onclick="toast('Opening...')">
+                <span>👤</span><span>Profile</span>
+              </button>
+              <button class="fabtn fp" onclick="openH2H({av:'SL',name:'Sarah Lin',bg:'linear-gradient(135deg,#C9973A,#e8b84b)'})">
+                <span>⚡</span><span>Challenge</span>
+              </button>
+            </div>
+          </div>
+          <div class="fcard" id="fc2">
+            <div class="ftop" onclick="expandF('fc2')">
+              <div class="fav2" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">MR</div>
+              <div class="finf2">
+                <div class="fnrow"><div class="fn">Marcus Reed</div></div>
+                <div class="ftask">🤝 Informational Interviews</div>
+                <div class="fprow"><div class="fbar2"><div class="ffill" style="width:33%;background:var(--green)"></div></div><div class="fpct">33%</div></div>
+              </div>
+              <div class="fright"><div class="fstreak">🔥 22d</div><div class="frankcip" style="background:var(--blue-light);color:var(--blue)">#2 Global</div></div>
+            </div>
+            <div class="factions" id="fa2">
+              <button class="fabtn" onclick="toast('👏 Sent!')"><span>👏</span><span>Encourage</span></button>
+              <button class="fabtn" onclick="toast('Opening...')"><span>👤</span><span>Profile</span></button>
+              <button class="fabtn fp" onclick="openH2H({av:'MR',name:'Marcus Reed',bg:'linear-gradient(135deg,#1A6B4A,#2DA86F)'})"><span>⚡</span><span>Challenge</span></button>
+            </div>
+          </div>
+          <div class="fcard atrisk" id="fc3">
+            <div class="ftop" onclick="expandF('fc3')">
+              <div class="fav2" style="background:linear-gradient(135deg,#8B1A1A,#C03030)">JP</div>
+              <div class="finf2">
+                <div class="fnrow"><div class="fn">Jordan Park</div><div style="font-size:10px;background:#FEF0E0;color:#9A5A10;padding:2px 7px;border-radius:99px;font-weight:600">⚠ At risk</div></div>
+                <div class="ftask">💹 Build a Financial Model</div>
+                <div class="fprow"><div class="fbar2"><div class="ffill" style="width:15%;background:var(--red)"></div></div><div class="fpct">15%</div></div>
+              </div>
+              <div class="fright"><div class="fstreak" style="color:var(--gold)">🔥 9d</div><div class="frankcip" style="background:var(--red-light);color:var(--red)">Slipping</div></div>
+            </div>
+            <div class="factions" id="fa3">
+              <button class="fabtn" style="border-color:#F5C842;color:#9A5A10;background:#FFFBF0" onclick="toast('🔔 Nudge sent!')"><span>🔔</span><span>Nudge them</span></button>
+              <button class="fabtn" onclick="toast('Opening...')"><span>👤</span><span>Profile</span></button>
+              <button class="fabtn fp" onclick="openH2H({av:'JP',name:'Jordan Park',bg:'linear-gradient(135deg,#8B1A1A,#C03030)'})"><span>⚡</span><span>Challenge</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Do it together card -->
+        <div class="sechead" style="margin-top:14px">Group challenge</div>
+        <div class="squad-together-card">
+          <div class="stc-top">
+            <div>
+              <div class="stc-title">Do it together</div>
+              <div class="stc-desc">Start the same challenge as your squad and compete side-by-side in real time. Everyone sees each other's progress.</div>
+            </div>
+          </div>
+          <div class="stc-avatars">
+            <div class="ctav" style="background:linear-gradient(135deg,#1B3F72,#2558A8)">OF</div>
+            <div class="ctav" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div>
+            <div class="ctav" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">MR</div>
+            <div class="ctav" style="background:rgba(255,255,255,.16);border:2px dashed rgba(255,255,255,.35);font-size:16px">+</div>
+          </div>
+          <button class="ctogbtn" onclick="toast('📋 Link copied!')">📋 Copy invite link</button>
+        </div>
+      </div>
+
+      <!-- ACTIVITY TAB -->
+      <div id="sqa" style="display:none">
+        <div class="sechead" style="padding:14px 20px 8px">What your squad is up to</div>
+        <div class="actfeed">
+          <div class="aitem">
+            <div class="aav" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div>
+            <div style="flex:1">
+              <div class="atext"><span class="aname">Sarah Lin</span> <span class="amuted">completed</span> <span class="ahigh">Build a Side Hustle</span> 🎉</div>
+              <div class="atime">2 min ago · +500 XP</div>
+            </div>
+            <button class="acheer" onclick="cheer(this)">👏 3</button>
+          </div>
+          <div class="aitem">
+            <div class="aav" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">MR</div>
+            <div style="flex:1">
+              <div class="atext"><span class="aname">Marcus</span> <span class="amuted">extended streak to</span> <span class="ahigh">22 days</span> 🔥</div>
+              <div class="atime">1 hr ago</div>
+            </div>
+            <button class="acheer" onclick="cheer(this)">🔥 12</button>
+          </div>
+          <div class="aitem">
+            <div class="aav" style="background:linear-gradient(135deg,#8B1A1A,#C03030)">JP</div>
+            <div style="flex:1">
+              <div class="atext"><span class="aname">Jordan Park</span> <span class="amuted">started</span> <span class="ahigh">Build a Financial Model</span></div>
+              <div class="atime">Yesterday · 9 days ago streak reset ⚠</div>
+            </div>
+            <button class="acheer" onclick="cheer(this)">💪 2</button>
+          </div>
+        </div>
+        <div class="sq-nudge-banner" onclick="toast('🔔 Nudge sent to Jordan!')">
+          <div>
+            <div style="font-size:13px;font-weight:600">Jordan Park is falling behind</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:2px">15% done · hasn't logged in for 3 days</div>
+          </div>
+          <div class="sq-nudge-btn">Send nudge 🔔</div>
+        </div>
+      </div>
+
+      <!-- COMPETE TAB -->
+      <div id="sqc" style="display:none;padding:14px 20px 20px">
+        <div class="sq-compete-intro">
+          <div class="sq-compete-title">Monthly sprint</div>
+          <div class="sq-compete-sub">Most XP earned this month wins. Resets every 1st.</div>
+        </div>
+        <div class="compcard">
+          <div class="comp-leader-row">
+            <div class="compav" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div>
+            <div style="flex:1">
+              <div style="font-size:13px;font-weight:600">Sarah Lin <span style="font-size:11px;font-weight:400;color:var(--muted)">is leading</span></div>
+              <div style="font-size:12px;color:var(--muted)">You need 520 more XP to catch up</div>
+            </div>
+            <div style="font-size:18px">👑</div>
+          </div>
+          <div style="height:1px;background:var(--border);margin:12px 0"></div>
+          <div class="comprow"><div class="compav" style="background:linear-gradient(135deg,#1B3F72,#2558A8)">OF</div><div class="compname">You</div><div class="compbarw"><div class="compbar"><div class="compfill" style="width:48%;background:var(--blue)"></div></div></div><div class="compval" style="color:var(--blue)">480</div><div style="font-size:13px;opacity:0"> </div></div>
+          <div class="comprow"><div class="compav" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div><div class="compname">Sarah</div><div class="compbarw"><div class="compbar"><div class="compfill" style="width:100%;background:var(--gold)"></div></div></div><div class="compval" style="color:var(--gold)">1,000</div><div style="font-size:13px">👑</div></div>
+          <div class="comprow"><div class="compav" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">MR</div><div class="compname">Marcus</div><div class="compbarw"><div class="compbar"><div class="compfill" style="width:62%;background:var(--green)"></div></div></div><div class="compval" style="color:var(--green)">620</div><div style="font-size:13px;opacity:0"> </div></div>
+          <div class="comprow"><div class="compav" style="background:linear-gradient(135deg,#8B1A1A,#C03030)">JP</div><div class="compname">Jordan</div><div class="compbarw"><div class="compbar"><div class="compfill" style="width:20%;background:var(--red)"></div></div></div><div class="compval" style="color:var(--red)">200</div><div style="font-size:13px;opacity:0"> </div></div>
+        </div>
+        <div class="sq-earn-tip">
+          <div style="font-size:13px;font-weight:600;margin-bottom:3px">How to earn XP fast</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6">Complete roadmap steps (+10 each) · Finish a full challenge (+100–500) · Get a Verified badge (+200 bonus) · Maintain your daily streak (+5/day)</div>
+        </div>
+      </div>
+      </div><!-- end squad-panel -->
+    </div><!-- end s-lb -->
 
     <!-- PROFILE -->
     <div class="screen" id="s-profile">
@@ -1542,180 +1743,7 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
       <button onclick="handleSignOut()" style="margin:0 20px 32px;width:calc(100% - 40px);padding:13px;background:transparent;color:var(--muted);border:1.5px solid var(--border);border-radius:11px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px">
         Sign Out
       </button>
-    </div>
-
-    <!-- SQUAD -->
-    <div class="screen" id="s-squad">
-      <div class="sq-hdr">
-        <div class="sq-top"><div class="sqtitle">Squad</div><button class="addbtn" onclick="toast('✉ Invite link copied!')">+ Add Friends</button></div>
-        <div class="sq-tabs">
-          <div class="sqtab active" onclick="sqTab(this,'sqf')">Friends</div>
-          <div class="sqtab" onclick="sqTab(this,'sqa')">Activity</div>
-          <div class="sqtab" onclick="sqTab(this,'sqc')">Compete</div>
-        </div>
-      </div>
-
-      <!-- FRIENDS TAB -->
-      <div id="sqf">
-        <div class="sechead" style="padding:14px 20px 8px">Your challenge</div>
-        <div class="mcbanner"><div class="mcbico" id="mc-ico">💼</div><div class="mcbinf"><div class="mcblbl">Active</div><div class="mcbtit" id="mc-title">—</div><div class="mcbprow"><div class="mcbbar"><div class="mcbfill" id="mc-fill" style="width:40%"></div></div><div class="mcbpct" id="mc-pct">40%</div></div></div><div class="mcbst"><div class="mcbsn">🔥14</div><div class="mcbsl">Day streak</div></div></div>
-
-
-        <!-- Live H2H progress -->
-        <div class="h2h-live-card" id="h2h-live-card" style="display:none">
-          <div class="h2h-live-top">
-            <div class="h2h-live-ttl">Live match vs Sarah Lin</div>
-            <div class="h2h-live-badge">⚡ LIVE</div>
-          </div>
-          <div class="h2h-row"><div class="h2h-row-av" style="background:linear-gradient(135deg,#1B3F72,#2558A8)">OF</div><div class="h2h-row-name">You</div><div class="h2h-bar-wrap"><div class="h2h-bar-fill" style="width:40%;background:var(--blue)"></div></div><div class="h2h-row-pct" style="color:var(--blue)">40%</div></div>
-          <div class="h2h-row"><div class="h2h-row-av" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div><div class="h2h-row-name">Sarah</div><div class="h2h-bar-wrap"><div class="h2h-bar-fill" style="width:62%;background:var(--gold)"></div></div><div class="h2h-row-pct" style="color:var(--gold)">62%</div></div>
-        </div>
-
-        <div class="sechead" style="margin-top:14px">Friends <span style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">· tap to expand</span></div>
-        <div class="flist">
-          <div class="fcard" id="fc1">
-            <div class="ftop" onclick="expandF('fc1')">
-              <div class="fav2" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL<div class="odot"></div></div>
-              <div class="finf2">
-                <div class="fnrow"><div class="fn">Sarah Lin</div></div>
-                <div class="ftask">💼 Building a Side Hustle</div>
-                <div class="fprow"><div class="fbar2"><div class="ffill" style="width:72%;background:var(--gold)"></div></div><div class="fpct">72%</div></div>
-              </div>
-              <div class="fright"><div class="fstreak">🔥 31d</div><div class="frankcip" style="background:var(--gold-light);color:var(--gold)">#1 Global</div></div>
-            </div>
-            <div class="factions" id="fa1">
-              <button class="fabtn" onclick="toast('👏 Sent!')">
-                <span>👏</span><span>Encourage</span>
-              </button>
-              <button class="fabtn" onclick="toast('Opening...')">
-                <span>👤</span><span>Profile</span>
-              </button>
-              <button class="fabtn fp" onclick="openH2H({av:'SL',name:'Sarah Lin',bg:'linear-gradient(135deg,#C9973A,#e8b84b)'})">
-                <span>⚡</span><span>Challenge</span>
-              </button>
-            </div>
-          </div>
-          <div class="fcard" id="fc2">
-            <div class="ftop" onclick="expandF('fc2')">
-              <div class="fav2" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">MR</div>
-              <div class="finf2">
-                <div class="fnrow"><div class="fn">Marcus Reed</div></div>
-                <div class="ftask">🤝 Informational Interviews</div>
-                <div class="fprow"><div class="fbar2"><div class="ffill" style="width:33%;background:var(--green)"></div></div><div class="fpct">33%</div></div>
-              </div>
-              <div class="fright"><div class="fstreak">🔥 22d</div><div class="frankcip" style="background:var(--blue-light);color:var(--blue)">#2 Global</div></div>
-            </div>
-            <div class="factions" id="fa2">
-              <button class="fabtn" onclick="toast('👏 Sent!')"><span>👏</span><span>Encourage</span></button>
-              <button class="fabtn" onclick="toast('Opening...')"><span>👤</span><span>Profile</span></button>
-              <button class="fabtn fp" onclick="openH2H({av:'MR',name:'Marcus Reed',bg:'linear-gradient(135deg,#1A6B4A,#2DA86F)'})"><span>⚡</span><span>Challenge</span></button>
-            </div>
-          </div>
-          <div class="fcard atrisk" id="fc3">
-            <div class="ftop" onclick="expandF('fc3')">
-              <div class="fav2" style="background:linear-gradient(135deg,#8B1A1A,#C03030)">JP</div>
-              <div class="finf2">
-                <div class="fnrow"><div class="fn">Jordan Park</div><div style="font-size:10px;background:#FEF0E0;color:#9A5A10;padding:2px 7px;border-radius:99px;font-weight:600">⚠ At risk</div></div>
-                <div class="ftask">💹 Build a Financial Model</div>
-                <div class="fprow"><div class="fbar2"><div class="ffill" style="width:15%;background:var(--red)"></div></div><div class="fpct">15%</div></div>
-              </div>
-              <div class="fright"><div class="fstreak" style="color:var(--gold)">🔥 9d</div><div class="frankcip" style="background:var(--red-light);color:var(--red)">Slipping</div></div>
-            </div>
-            <div class="factions" id="fa3">
-              <button class="fabtn" style="border-color:#F5C842;color:#9A5A10;background:#FFFBF0" onclick="toast('🔔 Nudge sent!')"><span>🔔</span><span>Nudge them</span></button>
-              <button class="fabtn" onclick="toast('Opening...')"><span>👤</span><span>Profile</span></button>
-              <button class="fabtn fp" onclick="openH2H({av:'JP',name:'Jordan Park',bg:'linear-gradient(135deg,#8B1A1A,#C03030)'})"><span>⚡</span><span>Challenge</span></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Do it together card -->
-        <div class="sechead" style="margin-top:14px">Group challenge</div>
-        <div class="squad-together-card">
-          <div class="stc-top">
-            <div>
-              <div class="stc-title">Do it together</div>
-              <div class="stc-desc">Start the same challenge as your squad and compete side-by-side in real time. Everyone sees each other's progress.</div>
-            </div>
-          </div>
-          <div class="stc-avatars">
-            <div class="ctav" style="background:linear-gradient(135deg,#1B3F72,#2558A8)">OF</div>
-            <div class="ctav" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div>
-            <div class="ctav" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">MR</div>
-            <div class="ctav" style="background:rgba(255,255,255,.16);border:2px dashed rgba(255,255,255,.35);font-size:16px">+</div>
-          </div>
-          <button class="ctogbtn" onclick="toast('📋 Link copied!')">📋 Copy invite link</button>
-        </div>
-      </div>
-
-      <!-- ACTIVITY TAB -->
-      <div id="sqa" style="display:none">
-        <div class="sechead" style="padding:14px 20px 8px">What your squad is up to</div>
-        <div class="actfeed">
-          <div class="aitem">
-            <div class="aav" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div>
-            <div style="flex:1">
-              <div class="atext"><span class="aname">Sarah Lin</span> <span class="amuted">completed</span> <span class="ahigh">Build a Side Hustle</span> 🎉</div>
-              <div class="atime">2 min ago · +500 XP</div>
-            </div>
-            <button class="acheer" onclick="cheer(this)">👏 3</button>
-          </div>
-          <div class="aitem">
-            <div class="aav" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">MR</div>
-            <div style="flex:1">
-              <div class="atext"><span class="aname">Marcus</span> <span class="amuted">extended streak to</span> <span class="ahigh">22 days</span> 🔥</div>
-              <div class="atime">1 hr ago</div>
-            </div>
-            <button class="acheer" onclick="cheer(this)">🔥 12</button>
-          </div>
-          <div class="aitem">
-            <div class="aav" style="background:linear-gradient(135deg,#8B1A1A,#C03030)">JP</div>
-            <div style="flex:1">
-              <div class="atext"><span class="aname">Jordan Park</span> <span class="amuted">started</span> <span class="ahigh">Build a Financial Model</span></div>
-              <div class="atime">Yesterday · 9 days ago streak reset ⚠</div>
-            </div>
-            <button class="acheer" onclick="cheer(this)">💪 2</button>
-          </div>
-        </div>
-        <div class="sq-nudge-banner" onclick="toast('🔔 Nudge sent to Jordan!')">
-          <div>
-            <div style="font-size:13px;font-weight:600">Jordan Park is falling behind</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:2px">15% done · hasn't logged in for 3 days</div>
-          </div>
-          <div class="sq-nudge-btn">Send nudge 🔔</div>
-        </div>
-      </div>
-
-      <!-- COMPETE TAB -->
-      <div id="sqc" style="display:none;padding:14px 20px 20px">
-        <div class="sq-compete-intro">
-          <div class="sq-compete-title">Monthly sprint</div>
-          <div class="sq-compete-sub">Most XP earned this month wins. Resets every 1st.</div>
-        </div>
-        <div class="compcard">
-          <div class="comp-leader-row">
-            <div class="compav" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div>
-            <div style="flex:1">
-              <div style="font-size:13px;font-weight:600">Sarah Lin <span style="font-size:11px;font-weight:400;color:var(--muted)">is leading</span></div>
-              <div style="font-size:12px;color:var(--muted)">You need 520 more XP to catch up</div>
-            </div>
-            <div style="font-size:18px">👑</div>
-          </div>
-          <div style="height:1px;background:var(--border);margin:12px 0"></div>
-          <div class="comprow"><div class="compav" style="background:linear-gradient(135deg,#1B3F72,#2558A8)">OF</div><div class="compname">You</div><div class="compbarw"><div class="compbar"><div class="compfill" style="width:48%;background:var(--blue)"></div></div></div><div class="compval" style="color:var(--blue)">480</div><div style="font-size:13px;opacity:0"> </div></div>
-          <div class="comprow"><div class="compav" style="background:linear-gradient(135deg,#C9973A,#e8b84b)">SL</div><div class="compname">Sarah</div><div class="compbarw"><div class="compbar"><div class="compfill" style="width:100%;background:var(--gold)"></div></div></div><div class="compval" style="color:var(--gold)">1,000</div><div style="font-size:13px">👑</div></div>
-          <div class="comprow"><div class="compav" style="background:linear-gradient(135deg,#1A6B4A,#2DA86F)">MR</div><div class="compname">Marcus</div><div class="compbarw"><div class="compbar"><div class="compfill" style="width:62%;background:var(--green)"></div></div></div><div class="compval" style="color:var(--green)">620</div><div style="font-size:13px;opacity:0"> </div></div>
-          <div class="comprow"><div class="compav" style="background:linear-gradient(135deg,#8B1A1A,#C03030)">JP</div><div class="compname">Jordan</div><div class="compbarw"><div class="compbar"><div class="compfill" style="width:20%;background:var(--red)"></div></div></div><div class="compval" style="color:var(--red)">200</div><div style="font-size:13px;opacity:0"> </div></div>
-        </div>
-        <div class="sq-earn-tip">
-          <div style="font-size:13px;font-weight:600;margin-bottom:3px">How to earn XP fast</div>
-          <div style="font-size:12px;color:var(--muted);line-height:1.6">Complete roadmap steps (+10 each) · Finish a full challenge (+100–500) · Get a Verified badge (+200 bonus) · Maintain your daily streak (+5/day)</div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- PUBLIC PROFILE VIEW (read-only) -->
+    </div><!-- PUBLIC PROFILE VIEW (read-only) -->
     <div class="screen" id="s-pubprofile" style="display:none">
       <div class="rm-hdr" style="padding-bottom:16px">
         <div class="rm-hero">
@@ -1744,29 +1772,25 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
 
   <nav class="bnav" id="bnav">
     <div class="bnav-inner">
+      <button class="nb active" id="nb-feed" onclick="navGo('s-feed','nb-feed')">
+        <div class="nb-ico" id="nb-feed-ico">🏠</div>
+        <span class="nb-lbl">HOME</span>
+      </button>
       <button class="nb" id="nb-swipe" onclick="navGoSwipe()">
-        <div class="nb-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <span class="nb-lbl">Challenges</span>
+        <div class="nb-ico">🔍</div>
+        <span class="nb-lbl">DISCOVER</span>
       </button>
-      <button class="nb" id="nb-road" onclick="navGo('s-roadmap','nb-road')">
-        <div class="nb-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <span class="nb-lbl">Roadmap</span>
-      </button>
-      <button class="nb" id="nb-feed" onclick="navGo('s-feed','nb-feed')">
-        <div class="nb-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-        <span class="nb-lbl">Feed</span>
+      <button class="nb" id="nb-videos" onclick="navGo('s-videos','nb-videos')">
+        <div class="nb-ico">▶️</div>
+        <span class="nb-lbl">FEED</span>
       </button>
       <button class="nb" id="nb-lb" onclick="navGo('s-lb','nb-lb')">
-        <div class="nb-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
-        <span class="nb-lbl">Rankings</span>
-      </button>
-      <button class="nb" id="nb-squad" onclick="navGo('s-squad','nb-squad')">
-        <div class="nb-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <span class="nb-lbl">Squad</span>
+        <div class="nb-ico">🏆</div>
+        <span class="nb-lbl">RANK</span>
       </button>
       <button class="nb" id="nb-prof" onclick="navGo('s-profile','nb-prof')">
-        <div class="nb-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <span class="nb-lbl">Profile</span>
+        <div class="nb-ico">👤</div>
+        <span class="nb-lbl">PROFILE</span>
       </button>
     </div>
   </nav>
@@ -1951,20 +1975,53 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
   <div class="quit-overlay" id="quit-overlay">
     <div class="quit-sheet">
       <div class="checkin-handle"></div>
-      <div style="font-family:'Fraunces',serif;font-size:20px;margin-bottom:6px">Before you quit…</div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:4px;line-height:1.55">What got in the way? This helps us improve the roadmap for everyone.</div>
-      <div class="quit-options" id="quit-options">
-        <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">⏰</div><div class="quit-option-txt">Not enough time right now</div></div>
-        <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">😕</div><div class="quit-option-txt">It was harder than expected</div></div>
-        <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">🎯</div><div class="quit-option-txt">I want to try a different challenge</div></div>
-        <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">💡</div><div class="quit-option-txt">The roadmap wasn't relevant to me</div></div>
-        <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">🤷</div><div class="quit-option-txt">Other reason</div></div>
+
+      <!-- Step 1: Reason selection -->
+      <div id="quit-step-1">
+        <div style="font-family:'Fraunces',serif;font-size:20px;margin-bottom:6px">Before you quit…</div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.55">What got in the way?</div>
+        <div class="quit-options" id="quit-options">
+          <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">⏰</div><div class="quit-option-txt">Not enough time right now</div></div>
+          <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">😕</div><div class="quit-option-txt">It was harder than expected</div></div>
+          <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">🎯</div><div class="quit-option-txt">I want to try a different challenge</div></div>
+          <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">💡</div><div class="quit-option-txt">The roadmap wasn't relevant to me</div></div>
+          <div class="quit-option" onclick="selectQuit(this)"><div class="quit-option-ico">🤷</div><div class="quit-option-txt">Other reason</div></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="pause-btn-keep" onclick="closeQuitModal()">Keep going</button>
+          <button class="quit-confirm-btn" style="flex:1" onclick="showQuitMotivation()">Continue →</button>
+        </div>
       </div>
-      <div style="display:flex;gap:8px;margin-top:4px">
-        <button class="pause-btn-keep" onclick="closeQuitModal()">Keep going</button>
-        <button class="quit-confirm-btn" style="flex:1" onclick="confirmQuit()">Quit challenge</button>
+
+      <!-- Step 2: AI motivation / push to stay -->
+      <div id="quit-step-2" style="display:none">
+        <div style="font-family:'Fraunces',serif;font-size:20px;margin-bottom:6px" id="quit-mot-title">Wait — you're closer than you think.</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px" id="quit-mot-msg">Most people quit right before the breakthrough. You've already started — that's the hardest part.</div>
+
+        <!-- AI coach push (Pro users) -->
+        <div id="quit-ai-section" style="background:linear-gradient(135deg,#0f0520,#1a0a35);border-radius:14px;padding:14px 16px;margin-bottom:14px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <div style="background:linear-gradient(135deg,#7B4FD0,#a374f0);border-radius:8px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">✦</div>
+            <div>
+              <div style="font-size:13px;font-weight:700;color:white">AI Coach</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.5)" id="quit-ai-sub">Personalised help for your situation</div>
+            </div>
+          </div>
+          <div id="quit-ai-msg" style="font-size:13px;color:rgba(255,255,255,.8);line-height:1.6;min-height:40px">
+            <div style="color:rgba(255,255,255,.4);font-style:italic">Loading coaching advice…</div>
+          </div>
+          <div id="quit-ai-upsell" style="display:none;margin-top:10px">
+            <div style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:8px">AI Coach is a Pro feature. Upgrade to get unstuck.</div>
+            <button onclick="closeQuitModal();purchasePremium()" style="width:100%;padding:10px;background:linear-gradient(135deg,#7B4FD0,#a374f0);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer">Unlock AI Coach — 7-day free trial</button>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:8px">
+          <button class="pause-btn-keep" onclick="closeQuitModal()">Stay & keep going</button>
+          <button class="quit-confirm-btn" style="flex:1" onclick="confirmQuit()">Quit anyway</button>
+        </div>
       </div>
-      <button class="quit-cancel-btn" onclick="closeQuitModal()">Cancel</button>
+
     </div>
   </div>
 
@@ -2008,19 +2065,6 @@ html,body{width:100%;height:100%;height:100dvh;background:#1B3F72;display:flex;a
 </div>
 
 <script>
-// ── LOGIN MODE TOGGLE ──
-function toggleLoginMode(mode){
-  const signup = document.getElementById('signup-section');
-  const signin = document.getElementById('signin-section');
-  if(mode==='signin'){
-    signup.style.display='none';
-    signin.style.display='block';
-  } else {
-    signup.style.display='block';
-    signin.style.display='none';
-  }
-}
-
 // ── 50 TASKS ──
 const ALL_TASKS=[
   {id:'linkedin',cat:'Professional',title:'Upgrade Your LinkedIn Profile',diff:'Medium',dc:'diff-m',time:'1–2 weeks',xp:'350 XP',invest:'~$0',icon:'💼',desc:'Transform your profile from basic to unforgettable. Stand out to recruiters and triple your profile views.'},
@@ -2097,6 +2141,15 @@ function loadFromStorage(key) {
 }
 
 // Called when the page loads — check if user is already logged in
+function showLandSignup(){
+  document.getElementById('land-signin-form').style.display='none';
+  document.getElementById('land-signup-form').style.display='block';
+}
+function showLandSignin(){
+  document.getElementById('land-signup-form').style.display='none';
+  document.getElementById('land-signin-form').style.display='block';
+}
+
 function checkAutoLogin() {
   const loggedIn = loadFromStorage('momentum_logged_in');
   const user = loadFromStorage('momentum_user');
@@ -2135,12 +2188,12 @@ function checkAutoLogin() {
     if (swipeData) {
       try {
         const sd = JSON.parse(swipeData);
-        const now = Date.now();
-        if (now - sd.timestamp < 24*60*60*1000) {
+        const today = getLocalDateStr();
+        if (sd.date === today) {
           swLeft = sd.count;
         } else {
           swLeft = MAX_SWIPES;
-          saveToStorage('momentum_swipes_left', {count: swLeft, timestamp: now});
+          saveToStorage('momentum_swipes_left', {count: swLeft, date: today});
         }
       } catch(e) {}
     }
@@ -2148,11 +2201,7 @@ function checkAutoLogin() {
     const surveyDone = loadFromStorage('momentum_survey_done');
     if (surveyDone === 'true') {
       setTimeout(requestNotificationPermission, 2000);
-      if(activeTask){
-        navGo('s-locked', 'nb-swipe');
-      } else {
-        navGo('s-swipe', 'nb-swipe');
-      }
+      navGo('s-feed', 'nb-feed');
     } else {
       go('s-surv');
     }
@@ -2233,13 +2282,14 @@ function handleSignIn() {
     if (swipeData) {
       try {
         const sd = JSON.parse(swipeData);
-        if (Date.now() - sd.timestamp < 24*60*60*1000) swLeft = sd.count;
-        else { swLeft = MAX_SWIPES; saveToStorage('momentum_swipes_left', {count: swLeft, timestamp: Date.now()}); }
+        const today = getLocalDateStr();
+        if (sd.date === today) swLeft = sd.count;
+        else { swLeft = MAX_SWIPES; saveToStorage('momentum_swipes_left', {count: swLeft, date: today}); }
       } catch(e) {}
     }
     const surveyDone = loadFromStorage('momentum_survey_done');
     if (surveyDone === 'true') {
-      navGo('s-locked', 'nb-swipe');
+      navGo('s-feed', 'nb-feed');
     } else {
       go('s-surv');
     }
@@ -2254,7 +2304,6 @@ function handleSignOut() {
   swLeft = MAX_SWIPES;
   Object.assign(surveyProfile, {role:'',strengths:[],goals:[],career:'',extra:''});
   go('s-land');
-  toggleLoginMode('signup');
   document.querySelectorAll('.nb').forEach(b => b.classList.remove('active'));
 }
 
@@ -2281,7 +2330,7 @@ function persistTask() {
 
 // Persist swipes whenever they change
 function persistSwipes() {
-  saveToStorage('momentum_swipes_left', {count: swLeft, timestamp: Date.now()});
+  saveToStorage('momentum_swipes_left', {count: swLeft, date: getLocalDateStr()});
 }
 
 // Persist seen IDs
@@ -2445,8 +2494,8 @@ function buildDeck(){
 }
 
 // ── NAV ──
-const allScreens=['s-land','s-verify','s-surv','s-premium','s-intro','s-swipe','s-empty','s-locked','s-accepted','s-roadmap','s-feed','s-lb','s-profile','s-squad','s-forgot','s-reset-code','s-new-pass','s-pubprofile'];
-const navScreens=['s-locked','s-feed','s-roadmap','s-lb','s-profile','s-squad','s-empty'];
+const allScreens=['s-land','s-verify','s-surv','s-premium','s-intro','s-swipe','s-empty','s-locked','s-accepted','s-roadmap','s-feed','s-lb','s-profile','s-forgot','s-reset-code','s-new-pass','s-pubprofile','s-videos'];
+const navScreens=['s-locked','s-feed','s-roadmap','s-lb','s-profile','s-empty','s-swipe','s-videos'];
 function go(id){
   allScreens.forEach(s=>{const el=document.getElementById(s);if(el){el.classList.remove('active','anim');}});
   const t=document.getElementById(id);if(t){t.classList.add('active');setTimeout(()=>t.classList.add('anim'),10);}
@@ -2475,8 +2524,9 @@ function go(id){
   if(id==='s-intro'){ setTimeout(requestNotificationPermission, 1500); }
   if(id==='s-profile'){syncProfile();updatePowCard();}
   if(id==='s-lb')renderLB('global');
-  if(id==='s-squad')syncSquad();
-  if(id==='s-feed')startFeedAnimations();
+
+  if(id==='s-feed'){ syncHomeScreen && syncHomeScreen(); }
+  if(id==='s-videos'){ renderVideoFeed && renderVideoFeed(); }
   if(id==='s-swipe'){swipeDeck=buildDeck();deckIdx=0;loadCard(0);updateSwipeCounter();}
   const onboarding=['s-land','s-verify','s-surv','s-premium','s-intro','s-accepted','s-forgot','s-reset-code','s-new-pass'];
   const bar=document.getElementById('streak-claim-card');
@@ -3133,32 +3183,34 @@ const cf=document.getElementById('cf');
 const ovs=document.getElementById('ovs');
 const ova=document.getElementById('ova');
 let dragStartX=0,dragCurrentX=0,isDragging=false;
-function startDrag(x){dragStartX=x;isDragging=true;cf.style.transition='none';}
+function startDrag(x){if(!cf)return;dragStartX=x;isDragging=true;cf.style.transition='none';}
 function moveDrag(x){
-  if(!isDragging)return;
+  if(!isDragging||!cf)return;
   dragCurrentX=x-dragStartX;
   cf.style.transform=`translateX(${dragCurrentX}px) rotate(${dragCurrentX*0.07}deg)`;
   const pct=Math.min(Math.abs(dragCurrentX)/80,1);
-  if(dragCurrentX>20){ova.style.opacity=pct;ovs.style.opacity=0;}
-  else if(dragCurrentX<-20){ovs.style.opacity=pct;ova.style.opacity=0;}
-  else{ovs.style.opacity=0;ova.style.opacity=0;}
+  if(dragCurrentX>20){if(ova)ova.style.opacity=pct;if(ovs)ovs.style.opacity=0;}
+  else if(dragCurrentX<-20){if(ovs)ovs.style.opacity=pct;if(ova)ova.style.opacity=0;}
+  else{if(ovs)ovs.style.opacity=0;if(ova)ova.style.opacity=0;}
 }
 function endDrag(){
-  if(!isDragging)return;
+  if(!isDragging||!cf)return;
   isDragging=false;
-  ovs.style.opacity=0;ova.style.opacity=0;
+  if(ovs)ovs.style.opacity=0;if(ova)ova.style.opacity=0;
   cf.style.transition='transform .38s ease,opacity .38s ease';
   if(dragCurrentX>90)animateAccept();
   else if(dragCurrentX<-90)animateSkip();
   else cf.style.transform='';
   dragCurrentX=0;
 }
-cf.addEventListener('mousedown',e=>startDrag(e.clientX));
+if(cf){
+  cf.addEventListener('mousedown',e=>startDrag(e.clientX));
+  cf.addEventListener('touchstart',e=>startDrag(e.touches[0].clientX),{passive:true});
+  cf.addEventListener('touchmove',e=>moveDrag(e.touches[0].clientX),{passive:true});
+  cf.addEventListener('touchend',endDrag,{passive:true});
+}
 window.addEventListener('mousemove',e=>{if(isDragging)moveDrag(e.clientX);});
 window.addEventListener('mouseup',endDrag);
-cf.addEventListener('touchstart',e=>startDrag(e.touches[0].clientX),{passive:true});
-cf.addEventListener('touchmove',e=>moveDrag(e.touches[0].clientX),{passive:true});
-cf.addEventListener('touchend',endDrag,{passive:true});
 
 function animateSkip(){
   if(!swipeDeck.length) return;
@@ -3207,7 +3259,7 @@ function animateAccept(){
 }
 function doSkip(){animateSkip();}
 function doAccept(){animateAccept();}
-swipeDeck=buildDeck();loadCard(0);
+if(cf){ swipeDeck=buildDeck(); loadCard(0); }
 
 function updateSwipeCounter(){
   const wrap = document.querySelector('#s-swipe .swipe-hdr .sctr');
@@ -4512,12 +4564,11 @@ function toggleStep(pi,si){
     // Check if 30 minutes have passed since it was completed
     const completedAt = stepTimes[key] || 0;
     const elapsed = Date.now() - completedAt;
-    const LOCK_MS = 30 * 60 * 1000; // 30 minutes
+    const LOCK_MS = 30 * 60 * 1000;
     if(elapsed > LOCK_MS){
       toast('⏰ Step locked — completed over 30 minutes ago.');
       return;
     }
-    // Within 30 mins — allow uncheck, clear timestamp and cascade
     delete stepTimes[key];
     stepStates[key] = false;
     const rm = activeTask._roadmap || {phases:[]};
@@ -4529,12 +4580,89 @@ function toggleStep(pi,si){
       });
     });
   } else {
-    // Checking — record the completion time
+    // ── SPEED FRAUD DETECTION ─────────────────────────────────────────────────
+    const now = Date.now();
     stepStates[key] = true;
-    stepTimes[key] = Date.now();
+    stepTimes[key] = now;
+
+    // Count how many steps have been completed in the last 60 seconds
+    const recentCompletions = Object.values(stepTimes).filter(t => now - t < 60 * 1000).length;
+
+    // Count total completed steps
+    const totalDone = Object.values(stepStates).filter(Boolean).length;
+
+    // Flag if: 4+ steps completed within 60 seconds
+    if(recentCompletions >= 4){
+      flagSuspiciousActivity('speed', totalDone);
+    }
+
+    // Flag if: completed ALL steps in under 2 minutes total
+    const rm = activeTask?._roadmap || {phases:[]};
+    let total = 0;
+    rm.phases.forEach(ph => total += ph.steps.length);
+    if(totalDone >= total && total > 3){
+      const firstTime = Math.min(...Object.values(stepTimes));
+      const lastTime = Math.max(...Object.values(stepTimes));
+      const totalMinutes = (lastTime - firstTime) / 60000;
+      if(totalMinutes < 2){
+        flagSuspiciousActivity('impossible', totalDone);
+      }
+    }
   }
 
   persistTask(); renderRoadmap(); updatePowCard();
+}
+
+// ── FRAUD FLAGGING ─────────────────────────────────────────────────────────────
+function flagSuspiciousActivity(reason, stepsCompleted){
+  const flags = JSON.parse(localStorage.getItem('momentum_flags')||'[]');
+  const now = new Date().toISOString();
+  const taskTitle = activeTask?.title || 'Unknown';
+
+  // Don't spam flags — only once per task per reason
+  const alreadyFlagged = flags.some(f => f.taskId === activeTask?.id && f.reason === reason);
+  if(alreadyFlagged) return;
+
+  flags.push({
+    taskId: activeTask?.id,
+    taskTitle,
+    reason,
+    stepsCompleted,
+    flaggedAt: now,
+    reviewed: false
+  });
+  localStorage.setItem('momentum_flags', JSON.stringify(flags));
+
+  // Show warning overlay
+  showFraudWarning(reason);
+}
+
+function showFraudWarning(reason){
+  // Remove existing warning if any
+  const existing = document.getElementById('fraud-warning');
+  if(existing) existing.remove();
+
+  const msg = reason === 'speed'
+    ? 'You\'re completing steps very quickly. Make sure you\'ve actually done the work — proof of work is reviewed by our team and must match your submissions.'
+    : 'This challenge was completed unusually fast. Our team reviews all proof submissions and flags suspicious activity.';
+
+  const div = document.createElement('div');
+  div.id = 'fraud-warning';
+  div.style.cssText = 'position:absolute;bottom:80px;left:16px;right:16px;background:#1a0a0a;border:1.5px solid #ef4444;border-radius:14px;padding:14px 16px;z-index:9999;animation:fadeIn .3s ease';
+  div.innerHTML = `
+    <div style="display:flex;align-items:flex-start;gap:10px">
+      <div style="font-size:20px;flex-shrink:0">⚠️</div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#fca5a5;margin-bottom:4px">Heads up</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.75);line-height:1.55">${msg}</div>
+      </div>
+      <div onclick="document.getElementById('fraud-warning').remove()" style="font-size:18px;color:rgba(255,255,255,.4);cursor:pointer;flex-shrink:0;margin-left:auto">×</div>
+    </div>
+  `;
+  const phone = document.querySelector('.phone') || document.body;
+  phone.appendChild(div);
+  // Auto-dismiss after 6 seconds
+  setTimeout(()=>{ if(div.parentNode) div.remove(); }, 6000);
 }
 
 function renderRoadmap(){
@@ -4657,10 +4785,12 @@ function vgo(i){
   const fac=document.getElementById('fac'+i);
   if(fac){const t1=setTimeout(()=>{fac.classList.add('show');const t2=setTimeout(()=>fac.classList.remove('show'),4200);facTimers.push(t2);},700);facTimers.push(t1);}
 }
-fw.addEventListener('touchstart',e=>{vsy=e.touches[0].clientY;vdr=true;},{passive:true});
-fw.addEventListener('touchmove',e=>{if(!vdr)return;vdelta=vsy-e.touches[0].clientY;ft.style.transition='none';ft.style.transform=`translateY(${-vcur*656-vdelta}px)`;},{passive:true});
-fw.addEventListener('touchend',()=>{ft.style.transition='transform .42s cubic-bezier(.4,0,.2,1)';if(vdelta>55)vgo(vcur+1);else if(vdelta<-55)vgo(vcur-1);else vgo(vcur);vdr=false;vdelta=0;});
-fw.addEventListener('wheel',e=>{e.preventDefault();if(e.deltaY>30)vgo(vcur+1);else if(e.deltaY<-30)vgo(vcur-1);},{passive:false});
+if(fw){
+  fw.addEventListener('touchstart',e=>{vsy=e.touches[0].clientY;vdr=true;},{passive:true});
+  fw.addEventListener('touchmove',e=>{if(!vdr)return;vdelta=vsy-e.touches[0].clientY;ft.style.transition='none';ft.style.transform=`translateY(${-vcur*656-vdelta}px)`;},{passive:true});
+  fw.addEventListener('touchend',()=>{ft.style.transition='transform .42s cubic-bezier(.4,0,.2,1)';if(vdelta>55)vgo(vcur+1);else if(vdelta<-55)vgo(vcur-1);else vgo(vcur);vdr=false;vdelta=0;});
+  fw.addEventListener('wheel',e=>{e.preventDefault();if(e.deltaY>30)vgo(vcur+1);else if(e.deltaY<-30)vgo(vcur-1);},{passive:false});
+}
 function vlike(btn){const c=btn.querySelector('.vcirc');const l=btn.querySelector('.vlbl');const on=c.classList.toggle('liked');const n=parseInt(c.getAttribute('data-n'))||0;const nv=on?n+1:n-1;c.setAttribute('data-n',nv);l.textContent=nv>=1000?(nv/1000).toFixed(1)+'k':nv;}
 function vsave(btn){const c=btn.querySelector('.vcirc');c.classList.toggle('liked');toast(c.classList.contains('liked')?'📌 Saved':'Unsaved');}
 
@@ -4672,7 +4802,22 @@ const lbdata={
 };
 let pidx=1;const periods=['This Week','This Month','All Time'];
 function cyclePeriod(el){pidx=(pidx+1)%periods.length;el.textContent=periods[pidx]+' ▾';}
-function setLBScope(el,sc){document.querySelectorAll('.lbtab').forEach(t=>t.classList.remove('active'));el.classList.add('active');renderLB(sc);document.getElementById('my-rank-scope').textContent={global:'Global',city:'City',uni:'University'}[sc];}
+function setLBScope(el,sc){
+  document.querySelectorAll('.lbtab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  const lbPanel = document.getElementById('lb-panel');
+  const squadPanel = document.getElementById('squad-panel');
+  if(sc==='squad'){
+    if(lbPanel) lbPanel.style.display='none';
+    if(squadPanel) squadPanel.style.display='block';
+    syncSquad&&syncSquad();
+  } else {
+    if(lbPanel) lbPanel.style.display='block';
+    if(squadPanel) squadPanel.style.display='none';
+    renderLB(sc);
+    document.getElementById('my-rank-scope').textContent={global:'Global',city:'City',uni:'University'}[sc];
+  }
+}
 function renderLB(sc){
   const data=lbdata[sc]||lbdata.global;const list=document.getElementById('lb-list');
   const medals={1:'🥇',2:'🥈',3:'🥉'};
@@ -4697,6 +4842,223 @@ function saveLocation(){
   surveyProfile.city=city;
   saveToStorage('momentum_survey_data',JSON.stringify(surveyProfile));
   toast('📍 Location saved');
+}
+
+function claimStreakHome(){
+  claimStreak();
+  syncHomeScreen();
+}
+
+function syncHomeScreen(){
+  // Daily motivational greeting — changes each calendar day
+  const hour = new Date().getHours();
+  const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(),0,0))/(1000*60*60*24));
+
+  const MSG_MORNING = [
+    // ACTION / EXECUTION — best for morning
+    "Start before you feel ready.",
+    "Stop waiting. Start building.",
+    "The sooner you start, the sooner you finish.",
+    "Action creates clarity. Thinking creates doubt.",
+    "You don't need a new plan. You need to execute.",
+    "Winners execute. Losers overthink.",
+    "Less talk. More reps.",
+    "You either did it or you didn't. Choose.",
+    "One hour today changes everything later.",
+    "Today counts. More than you think.",
+    // DISCIPLINE
+    "Do it tired. Do it unmotivated. Just do it.",
+    "Make it a non-negotiable.",
+    "Stop negotiating with yourself.",
+    "Do what needs to be done, not what feels good.",
+    "No shortcuts. Just work.",
+    // TIME / URGENCY
+    "The best time to start was yesterday. The next best time is now.",
+    "You don't need more time. You need more focus.",
+    "One more step today means one less regret later.",
+    // EXTRAS
+    "The window is open. Use it.",
+    "Every morning is a blank page. Write something worth reading.",
+  ];
+
+  const MSG_AFTERNOON = [
+    // DISCIPLINE — good mid-day push
+    "Discipline is just doing it when you don't feel like it.",
+    "You don't need motivation. You need a system.",
+    "Train your mind to push when it wants to quit.",
+    "Keep promises to yourself.",
+    "Don't break the chain.",
+    "Stack small wins daily.",
+    "Stop negotiating with yourself.",
+    "Do what needs to be done, not what feels good.",
+    // CONSISTENCY
+    "The people who show up every day win.",
+    "Consistency is the most underrated skill.",
+    "The difference is consistency. That's it.",
+    "Success is built on boring days done right.",
+    "Don't break the chain.",
+    "Momentum builds on momentum. Start.",
+    "Motivation gets you started. Habit keeps you going.",
+    "Results happen over time, not overnight.",
+    "Small steps done consistently beat big leaps occasionally.",
+    // EFFORT
+    "The reps you skip are the results you miss.",
+    "Don't lower the goal. Raise the effort.",
+    "Results respect effort.",
+    // EXTRAS
+    "The afternoon slump is just a test. Pass it.",
+    "Halfway through the day. Finish strong.",
+  ];
+
+  const MSG_EVENING = [
+    // FUTURE / PURPOSE
+    "Future you is watching. Make them proud.",
+    "Do something today your future self will thank you for.",
+    "The work you do today is the proof you need tomorrow.",
+    "Your habits are writing your future right now.",
+    "You're building something — act like it.",
+    "The version of you that quits and the version that pushes through lead very different lives.",
+    "Your future is built in minutes, not moments.",
+    "You are one decision away from a completely different life.",
+    "The grind you avoid is the life you delay.",
+    "One more step today means one less regret tonight.",
+    // ACCOUNTABILITY
+    "Be the person who finishes.",
+    "Did today count? Make sure it does.",
+    "End the day better than you started it.",
+    // EXTRAS
+    "What you do in the evenings separates you from everyone else.",
+    "Most people are winding down. You're winding up.",
+    "The work you put in tonight is the confidence you wake up with tomorrow.",
+  ];
+
+  const MSG_ANY = [
+    // MINDSET
+    "Progress over perfection. Always.",
+    "You're not behind. You're exactly where you need to be.",
+    "You're closer than you think — keep going.",
+    "Every expert was once exactly where you are now.",
+    "It always seems impossible until it's done.",
+    "Focus on the next step, not the whole staircase.",
+    "Get comfortable being uncomfortable.",
+    "Comfort is the enemy of growth.",
+    "If it were easy, everyone would do it.",
+    "Build the life you want, one challenge at a time.",
+    // EFFORT
+    "Hard work beats talent when talent doesn't work hard.",
+    "Every day you skip is a day your competition doesn't.",
+    "The only bad session is the one you skipped.",
+    "Earn your confidence through action.",
+    "Effort compounds just like interest.",
+    // ACCOUNTABILITY
+    "Prove yourself to yourself, not others.",
+    "Show up messy. Show up imperfect. Just show up.",
+    "The hardest part is opening the app. You already did that.",
+    // CONSISTENCY
+    "Showing up is 80% of success.",
+    "Don't count the days — make the days count.",
+    // ACTION
+    "The gap between who you are and who you want to be is action.",
+    "Don't wish for it. Work for it.",
+    // DISCIPLINE
+    "Discipline now = freedom later.",
+    // EXTRAS
+    "Reputation is built in the moments no one sees.",
+    "The standard you walk past is the standard you accept.",
+    "Most people want results. Few want to do the work. Be the few.",
+    "Nobody is coming to save you. That's the good news.",
+    "You are your own best investment.",
+    "Small things, done consistently, become big things.",
+  ];
+
+  let pool;
+  if(hour >= 5 && hour < 12)       pool = [...MSG_MORNING, ...MSG_ANY];
+  else if(hour >= 12 && hour < 17) pool = [...MSG_AFTERNOON, ...MSG_ANY];
+  else                              pool = [...MSG_EVENING, ...MSG_ANY];
+
+  const todayMsg = pool[dayOfYear % pool.length];
+  const nameEl = document.getElementById('home-name');
+  if(nameEl) nameEl.textContent = todayMsg;
+  const labelEl = document.getElementById('home-greeting-label');
+  if(labelEl){
+    const u = JSON.parse(localStorage.getItem('momentum_user')||'{}');
+    const firstName = (u.name||'').split(' ')[0] || '';
+    const namePart = firstName ? `, ${firstName}` : '';
+    labelEl.textContent = (hour < 12 ? 'GOOD MORNING' : hour < 17 ? 'GOOD AFTERNOON' : 'GOOD EVENING') + namePart;
+  }
+
+  // Hide upgrade btn if premium
+  const upgradeBtn = document.getElementById('home-upgrade-btn');
+  if(upgradeBtn) upgradeBtn.style.display = getIsPremium() ? 'none' : '';
+
+  // Level + XP
+  const xp = parseInt(localStorage.getItem('momentum_xp')||'0');
+  const lv = getLevelFromXP ? getLevelFromXP(xp) : {level:1,name:'Rookie',xpRequired:0,xpNext:100};
+  const next = lv.level < 20 ? lv.xpNext : lv.xpRequired;
+  const pct = lv.level < 20 ? Math.min(100,Math.round((xp-lv.xpRequired)/(next-lv.xpRequired)*100)) : 100;
+  const xpToNext = lv.level < 20 ? (next - xp) : 0;
+  const setEl = (id,v) => { const e=document.getElementById(id); if(e) e.textContent=v; };
+  setEl('home-level-label','LEVEL '+lv.level);
+  setEl('home-xp-display', xp.toLocaleString()+' XP');
+  setEl('home-level-name', lv.name);
+  setEl('home-level-next', lv.level<20 ? xpToNext.toLocaleString()+' XP to Level '+(lv.level+1) : 'Max Level!');
+  const bar = document.getElementById('home-level-bar');
+  if(bar) bar.style.width = pct+'%';
+
+  // Stats
+  const streak = parseInt(localStorage.getItem('momentum_streak_count')||'0');
+  const completed = parseInt(localStorage.getItem('momentum_completed')||'0');
+  const attempts = parseInt(localStorage.getItem('momentum_attempts')||'0');
+  const freezes = parseInt(localStorage.getItem('momentum_streak_freezes')||'0');
+  const rate = attempts > 0 ? Math.round((completed/attempts)*100) : 0;
+  setEl('home-stat-completed', completed);
+  setEl('home-stat-streak', streak);
+  setEl('home-stat-freezes', freezes);
+  setEl('home-stat-rate', rate+'%');
+
+  // Streak claim card
+  const homeStreakCard = document.getElementById('home-streak-card');
+  const homeStreakDay = document.getElementById('home-streak-day');
+  if(homeStreakCard && homeStreakDay){
+    const today = getLocalDateStr ? getLocalDateStr() : new Date().toISOString().split('T')[0];
+    const lastDate = localStorage.getItem('momentum_streak_last_date')||'';
+    const diff = lastDate ? Math.round((new Date(today+'T00:00:00') - new Date(lastDate+'T00:00:00'))/(1000*60*60*24)) : 999;
+    if(lastDate && diff === 0){
+      homeStreakCard.style.display = 'none'; // already claimed
+    } else if(!lastDate || diff > 1){
+      homeStreakCard.style.display = 'flex';
+      homeStreakDay.textContent = '1';
+    } else {
+      homeStreakCard.style.display = 'flex';
+      homeStreakDay.textContent = streak + 1;
+    }
+  }
+
+  // Active challenge card
+  const noChEl = document.getElementById('home-no-challenge');
+  const acEl = document.getElementById('home-active-challenge');
+  if(activeTask){
+    if(noChEl) noChEl.style.display='none';
+    if(acEl) acEl.style.display='block';
+    const rm = activeTask._roadmap||{phases:[]};
+    let total=0,done=0;
+    rm.phases.forEach((ph,pi)=>ph.steps.forEach((_,si)=>{total++;if(stepStates[pi+'-'+si]||stepStates[`${pi}-${si}`])done++;}));
+    const pct2 = total ? Math.round(done/total*100) : 0;
+    const diffMap = {'diff-e':'Easy','diff-m':'Intermediate','diff-h':'Hard'};
+    const diffBg = {'diff-e':'#E8F8EE','diff-m':'#FEF0E0','diff-h':'#FDE8E8'};
+    const diffCol = {'diff-e':'#1A6B4A','diff-m':'#9A5A10','diff-h':'#A02020'};
+    setEl('home-ch-cat', activeTask.cat||'');
+    setEl('home-ch-title', activeTask.title||'');
+    setEl('home-ch-meta', (activeTask.time||'')+(activeTask.xp?' · '+activeTask.xp:''));
+    setEl('home-ch-steps', done+'/'+total+' steps');
+    const diffEl = document.getElementById('home-ch-diff');
+    if(diffEl){ diffEl.textContent=diffMap[activeTask.dc]||activeTask.diff||''; diffEl.style.background=diffBg[activeTask.dc]||'#EEE'; diffEl.style.color=diffCol[activeTask.dc]||'#555'; }
+    const chBar = document.getElementById('home-ch-bar');
+    if(chBar) chBar.style.width = pct2+'%';
+  } else {
+    if(noChEl) noChEl.style.display='block';
+    if(acEl) acEl.style.display='none';
+  }
 }
 
 function syncProfile(){
@@ -4834,6 +5196,14 @@ function submitPow(){
 }
 
 function confirmPowSubmit(){
+  // Update success rate stats
+  const completed = parseInt(localStorage.getItem('momentum_completed')||'0') + 1;
+  const attempts  = parseInt(localStorage.getItem('momentum_attempts')||'0') + 1;
+  localStorage.setItem('momentum_completed', String(completed));
+  localStorage.setItem('momentum_attempts',  String(attempts));
+  localStorage.setItem('momentum_first_badge','1');
+  if(typeof checkMilestones==='function') checkMilestones();
+
   closePowModal();
 
   // Capture task data before clearing
@@ -5213,6 +5583,191 @@ Rules: title max 40 chars, body max 100 chars. If they made progress — celebra
     const clean = text.replace(/```json|```/g,'').trim();
     return JSON.parse(clean);
   } catch(e){ return null; }
+}
+
+
+// ── LEVEL SYSTEM ─────────────────────────────────────────────────────────────
+const LEVELS=[
+  {level:1,name:'Rookie',xpRequired:0,xpNext:100},
+  {level:2,name:'Motivated',xpRequired:100,xpNext:250},
+  {level:3,name:'Consistent',xpRequired:250,xpNext:500},
+  {level:4,name:'Committed',xpRequired:500,xpNext:900},
+  {level:5,name:'Rising Star',xpRequired:900,xpNext:1500},
+  {level:6,name:'Achiever',xpRequired:1500,xpNext:2400},
+  {level:7,name:'Builder',xpRequired:2400,xpNext:3600},
+  {level:8,name:'Go-Getter',xpRequired:3600,xpNext:5200},
+  {level:9,name:'Hustler',xpRequired:5200,xpNext:7200},
+  {level:10,name:'Pro',xpRequired:7200,xpNext:9700},
+  {level:11,name:'Sharp',xpRequired:9700,xpNext:12700},
+  {level:12,name:'Relentless',xpRequired:12700,xpNext:16200},
+  {level:13,name:'Clutch',xpRequired:16200,xpNext:20200},
+  {level:14,name:'Powerhouse',xpRequired:20200,xpNext:25200},
+  {level:15,name:'Legend',xpRequired:25200,xpNext:31200},
+  {level:16,name:'Elite',xpRequired:31200,xpNext:38700},
+  {level:17,name:'Vanguard',xpRequired:38700,xpNext:47700},
+  {level:18,name:'Trailblazer',xpRequired:47700,xpNext:58700},
+  {level:19,name:'Icon',xpRequired:58700,xpNext:72200},
+  {level:20,name:'Momentum Legend',xpRequired:72200,xpNext:72200},
+];
+
+function getLevelFromXP(xp){
+  let lv=LEVELS[0];
+  for(const l of LEVELS){ if(xp>=l.xpRequired) lv=l; else break; }
+  return lv;
+}
+
+function addXP(amount, reason){
+  const prev=parseInt(localStorage.getItem('momentum_xp')||'0');
+  const prevLevel=getLevelFromXP(prev);
+  const newXP=prev+amount;
+  localStorage.setItem('momentum_xp',String(newXP));
+  const newLevel=getLevelFromXP(newXP);
+  showXPToast('+'+amount+' XP'+(reason?' '+reason:''));
+  if(newLevel.level>prevLevel.level) setTimeout(()=>showLevelUp(newLevel),800);
+  checkMilestones();
+  const profScreen=document.getElementById('s-profile');
+  if(profScreen&&profScreen.classList.contains('active')) syncProfile();
+  const feedScreen=document.getElementById('s-feed');
+  if(feedScreen&&feedScreen.classList.contains('active')) syncHomeScreen&&syncHomeScreen();
+}
+
+function showXPToast(msg){
+  let t=document.getElementById('xp-toast');
+  if(!t){
+    t=document.createElement('div');
+    t.id='xp-toast';
+    t.style.cssText='position:fixed;top:80px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--blue),#2558A8);color:white;border-radius:99px;padding:8px 20px;font-size:13px;font-weight:700;white-space:nowrap;z-index:9999;opacity:0;transition:opacity .3s;pointer-events:none';
+    document.body.appendChild(t);
+  }
+  t.textContent=msg;
+  t.style.opacity='1';
+  clearTimeout(window._xptt);
+  window._xptt=setTimeout(()=>t.style.opacity='0',1800);
+}
+
+function showLevelUp(levelData){
+  const overlay=document.getElementById('levelup-overlay');
+  if(!overlay) return;
+  document.getElementById('levelup-num').textContent=levelData.level;
+  document.getElementById('levelup-name').textContent=levelData.name;
+  document.getElementById('levelup-xp-gain').textContent='⚡ Level '+levelData.level+' — '+levelData.name+' unlocked';
+  overlay.classList.add('show');
+}
+function closeLevelUp(){
+  const o=document.getElementById('levelup-overlay');
+  if(o) o.classList.remove('show');
+}
+function updateLevelUI(){
+  const xp=parseInt(localStorage.getItem('momentum_xp')||'0');
+  const lv=getLevelFromXP(xp);
+  const next=LEVELS.find(l=>l.level===lv.level+1);
+  const badgeEl=document.getElementById('prof-level-badge');
+  const barEl=document.getElementById('prof-level-bar');
+  const labelEl=document.getElementById('prof-level-xp-label');
+  if(badgeEl) badgeEl.textContent='⚡ Level '+lv.level+' — '+lv.name;
+  if(next){
+    const pct=Math.min(100,Math.round((xp-lv.xpRequired)/(next.xpRequired-lv.xpRequired)*100));
+    if(barEl) barEl.style.width=pct+'%';
+    if(labelEl) labelEl.textContent=(xp-lv.xpRequired).toLocaleString()+' / '+(next.xpRequired-lv.xpRequired).toLocaleString()+' XP to Level '+next.level;
+  } else {
+    if(barEl) barEl.style.width='100%';
+    if(labelEl) labelEl.textContent='Max Level — Momentum Legend';
+  }
+}
+
+// ── MILESTONES ────────────────────────────────────────────────────────────────
+const MILESTONES=[
+  {id:'first_challenge',ico:'🎯',name:'First Blood',title:'First Challenge Complete',sub:'You finished your first Momentum challenge. This is how it starts.',xp:250,check:()=>parseInt(localStorage.getItem('momentum_completed')||'0')>=1},
+  {id:'five_challenges',ico:'🔥',name:'On a Roll',title:'5 Challenges Done',sub:"Five challenges complete. You're not just trying — you're doing.",xp:500,check:()=>parseInt(localStorage.getItem('momentum_completed')||'0')>=5},
+  {id:'ten_challenges',ico:'💎',name:'Unstoppable',title:'10 Challenges Done',sub:"Ten challenges complete. You're in the top 5% of users.",xp:1000,check:()=>parseInt(localStorage.getItem('momentum_completed')||'0')>=10},
+  {id:'first_badge',ico:'✅',name:'Verified',title:'First Verified Badge',sub:'You submitted proof and got verified. Your achievements are now real.',xp:500,check:()=>localStorage.getItem('momentum_first_badge')==='1'},
+  {id:'streak_7',ico:'🔥',name:'Week Warrior',title:'7-Day Streak',sub:'Seven days in a row. Habit formed.',xp:300,check:()=>parseInt(localStorage.getItem('momentum_streak_count')||'0')>=7},
+  {id:'streak_30',ico:'⚡',name:'Month of Momentum',title:'30-Day Streak',sub:"30 consecutive days. You're in a different league.",xp:1000,check:()=>parseInt(localStorage.getItem('momentum_streak_count')||'0')>=30},
+  {id:'streak_100',ico:'👑',name:'Century',title:'100-Day Streak',sub:"100 days. You've built a habit most people can't imagine.",xp:3000,check:()=>parseInt(localStorage.getItem('momentum_streak_count')||'0')>=100},
+  {id:'level_10',ico:'🚀',name:'Pro Status',title:'Reached Level 10',sub:"Level 10 — Pro. You're officially ahead of 90% of your peers.",xp:500,check:()=>getLevelFromXP(parseInt(localStorage.getItem('momentum_xp')||'0')).level>=10},
+];
+
+function checkMilestones(){
+  const awarded=JSON.parse(localStorage.getItem('momentum_milestones')||'[]');
+  for(const ms of MILESTONES){
+    if(!awarded.includes(ms.id)&&ms.check()){
+      awarded.push(ms.id);
+      localStorage.setItem('momentum_milestones',JSON.stringify(awarded));
+      setTimeout(()=>showMilestone(ms),600);
+      break;
+    }
+  }
+}
+function showMilestone(ms){
+  const o=document.getElementById('milestone-overlay');
+  if(!o) return;
+  const s=(id)=>{const e=document.getElementById(id);if(e)e.textContent=ms[id.replace('ms-','')]||'';};
+  document.getElementById('ms-ico').textContent=ms.ico;
+  document.getElementById('ms-badge-name').textContent=ms.name;
+  document.getElementById('ms-title').textContent=ms.title;
+  document.getElementById('ms-sub').textContent=ms.sub;
+  document.getElementById('ms-xp').textContent='★ +'+ms.xp+' XP';
+  o.classList.add('show');
+  window._pendingMilestoneXP=ms.xp;
+}
+function closeMilestone(){
+  const o=document.getElementById('milestone-overlay');
+  if(o) o.classList.remove('show');
+  if(window._pendingMilestoneXP){addXP(window._pendingMilestoneXP,'— milestone bonus');window._pendingMilestoneXP=0;}
+}
+
+// ── STREAK FREEZE ─────────────────────────────────────────────────────────────
+function getStreakFreezes(){return parseInt(localStorage.getItem('momentum_streak_freezes')||'0');}
+function addStreakFreeze(n){localStorage.setItem('momentum_streak_freezes',String(getStreakFreezes()+n));updateFreezeUI();}
+function updateFreezeUI(){
+  const el=document.getElementById('freeze-count-badge');
+  const n=getStreakFreezes();
+  if(el) el.textContent=n+' freeze'+(n!==1?'s':'');
+}
+function earnStreakFreeze(){
+  const xp=parseInt(localStorage.getItem('momentum_xp')||'0');
+  if(xp<500){toast('You need 500 XP to earn a streak freeze.');return;}
+  localStorage.setItem('momentum_xp',String(xp-500));
+  addStreakFreeze(1);
+  toast('❄️ Streak Freeze added!');
+}
+function purchaseStreakFreeze(){addStreakFreeze(1);toast('❄️ Streak Freeze added! ($0.99)');}
+
+// ── REFERRAL ──────────────────────────────────────────────────────────────────
+function updateReferralUI(){
+  const n=document.getElementById('inp-name');
+  const name=n?n.value.trim().toLowerCase().replace(/\s+/g,''):'user';
+  const code=name+Math.abs(name.split('').reduce((a,c)=>((a<<5)-a)+c.charCodeAt(0),0)).toString().slice(-4);
+  const link='momentum.app/invite/'+code;
+  const el=document.getElementById('referral-link-text');
+  if(el) el.textContent=link;
+  window._referralLink=link;
+  const refs=JSON.parse(localStorage.getItem('momentum_referrals')||'{"invited":0,"joined":0,"xp":0}');
+  const si=document.getElementById('ref-invited'),sj=document.getElementById('ref-joined'),sx=document.getElementById('ref-xp');
+  if(si)si.textContent=refs.invited;if(sj)sj.textContent=refs.joined;if(sx)sx.textContent=refs.xp;
+}
+function copyReferralLink(){
+  const link='https://'+(window._referralLink||'momentum.app/invite/user');
+  if(navigator.clipboard){navigator.clipboard.writeText(link).then(()=>toast('🎁 Referral link copied!'));}
+  else{toast('🎁 '+link);}
+}
+
+// ── CHALLENGE REVIEW ─────────────────────────────────────────────────────────
+let _reviewStar=0;
+function setReviewStar(n){
+  _reviewStar=n;
+  document.querySelectorAll('.star-btn').forEach((btn,i)=>{
+    btn.textContent=i<n?'⭐':'☆';
+    btn.classList.toggle('sel',i<n);
+  });
+}
+function submitReview(){
+  if(!_reviewStar){toast('Please select a star rating first.');return;}
+  if(!activeTask) return;
+  localStorage.setItem('momentum_review_'+activeTask.id,JSON.stringify({star:_reviewStar,text:document.getElementById('review-text')?.value.trim()||'',date:new Date().toISOString().split('T')[0]}));
+  addXP(50,'— review bonus');
+  toast('⭐ Review submitted! +50 XP');
+  renderRoadmap&&renderRoadmap();
 }
 
 function scheduleNotifications(){
@@ -5974,11 +6529,71 @@ function hidePauseBanner(){
 }
 function openQuitModal(){
   hidePauseBanner();
+  document.getElementById('quit-step-1').style.display='block';
+  document.getElementById('quit-step-2').style.display='none';
+  document.querySelectorAll('.quit-option').forEach(o=>o.classList.remove('on'));
+  _quitReason='';
   document.getElementById('quit-overlay').classList.add('show');
 }
 function closeQuitModal(){
   document.getElementById('quit-overlay').classList.remove('show');
+  setTimeout(()=>{
+    document.getElementById('quit-step-1').style.display='block';
+    document.getElementById('quit-step-2').style.display='none';
+    document.querySelectorAll('.quit-option').forEach(o=>o.classList.remove('on'));
+    _quitReason='';
+  },400);
 }
+
+// Motivation by reason
+const QUIT_MOTIVATION={
+  'Not enough time right now':{title:'Time is tight — but not gone.',msg:'Even 10 minutes a day moves this forward. Your roadmap saves every step — you can always come back.',ai:'What\'s the smallest step you could do in the next 15 minutes? I\'ll show you exactly what to focus on right now.'},
+  'It was harder than expected':{title:'Hard means you\'re growing.',msg:'Every person who completed this challenge hit this exact wall. Getting stuck is part of the process — not a sign to stop.',ai:'Tell me which step is blocking you and I\'ll break it down into something you can actually do today.'},
+  'I want to try a different challenge':{title:'Switching costs more than you think.',msg:'Starting over puts you back at zero. The progress you\'ve made here compounds — abandoning it doesn\'t.',ai:'If the challenge feels wrong, I can help you find which remaining step actually connects to your goals.'},
+  "The roadmap wasn't relevant to me":{title:"Let's fix the roadmap, not quit.",msg:'The AI Coach can tailor your current step to your specific role, location, and goals. Give it one try first.',ai:'Tell me what feels off and I\'ll give you a version of this step that actually fits your situation.'},
+  'Other reason':{title:'Before you go…',msg:"You've already done the hardest thing — starting. Whatever the reason, even pausing beats quitting.",ai:"What's really going on? Tell me and I'll see if there's a way through."},
+};
+
+async function showQuitMotivation(){
+  if(!_quitReason){toast('Please select a reason first.');return;}
+  document.getElementById('quit-step-1').style.display='none';
+  document.getElementById('quit-step-2').style.display='block';
+  const mot=QUIT_MOTIVATION[_quitReason]||QUIT_MOTIVATION['Other reason'];
+  document.getElementById('quit-mot-title').textContent=mot.title;
+  document.getElementById('quit-mot-msg').textContent=mot.msg;
+  const aiMsgEl=document.getElementById('quit-ai-msg');
+  const aiUpsellEl=document.getElementById('quit-ai-upsell');
+  const aiSubEl=document.getElementById('quit-ai-sub');
+  if(!getIsPremium()){
+    aiMsgEl.innerHTML=`<span style="color:rgba(255,255,255,.65);font-style:italic">"${mot.ai}"</span>`;
+    aiSubEl.textContent='Pro feature — unlock to get this personalised';
+    aiUpsellEl.style.display='block';
+    return;
+  }
+  aiUpsellEl.style.display='none';
+  aiSubEl.textContent='Generating personalised advice…';
+  aiMsgEl.innerHTML='<span style="color:rgba(255,255,255,.4);font-style:italic">Thinking…</span>';
+  const done=Object.entries(stepStates).filter(([,v])=>v).length;
+  const total=activeTask?._roadmap?.phases?.reduce((a,p)=>a+p.steps.length,0)||0;
+  const pct=total?Math.round(done/total*100):0;
+  const prompt=`You are an AI coach inside Momentum. A user is about to quit their challenge.
+Challenge: ${activeTask?.title||'Unknown'}
+Progress: ${pct}% (${done}/${total} steps done)
+Quit reason: ${_quitReason}
+User: ${surveyProfile.role||''}, career goal: ${surveyProfile.career||''}
+Write 2-3 sentences max (under 55 words). Be direct, warm, specific. Reference their actual progress. End with one concrete next action they can do right now. No fluff.`;
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:120,messages:[{role:'user',content:prompt}]})});
+    const data=await res.json();
+    const reply=data.content?.[0]?.text||mot.ai;
+    aiMsgEl.innerHTML=`<span style="color:rgba(255,255,255,.88)">${reply}</span>`;
+    aiSubEl.textContent='Personalised for you';
+  }catch(e){
+    aiMsgEl.innerHTML=`<span style="color:rgba(255,255,255,.75)">${mot.ai}</span>`;
+    aiSubEl.textContent='AI Coach';
+  }
+}
+
 function selectQuit(el){
   document.querySelectorAll('.quit-option').forEach(o=>o.classList.remove('on'));
   el.classList.add('on');
@@ -6002,17 +6617,13 @@ function confirmQuit(){
   activeTask=null; stepStates={}; stepTimes={};
   localStorage.removeItem('momentum_task_started');
   saveToStorage('momentum_active_task','');
-  const reason = _quitReason;
+  // Count as an attempt — affects success rate
+  const attempts = parseInt(localStorage.getItem('momentum_attempts')||'0') + 1;
+  localStorage.setItem('momentum_attempts', String(attempts));
   _quitReason='';
   document.querySelectorAll('.quit-option').forEach(o=>o.classList.remove('on'));
-  // If "It was harder than expected" — offer AI coach help first
-  if(reason.includes('harder')){
-    toast('Opening AI Coach to help you through it…');
-    setTimeout(()=>{ navGo('s-roadmap','nb-road'); setTimeout(openAiChat,600); }, 800);
-  } else {
-    toast('Challenge ended. Swiping is unlocked.');
-    setTimeout(()=>navGo('s-swipe','nb-swipe'),800);
-  }
+  toast('Challenge ended. Swiping is unlocked.');
+  setTimeout(()=>navGo('s-swipe','nb-swipe'),800);
 }
 
 // ── STUCK DETECTION + PUSH NOTIFICATIONS ─────────────────────────────────────
@@ -6338,12 +6949,233 @@ function cancelPremium(){
   localStorage.removeItem('momentum_premium_since');
   // Hard reset swipes to 10
   swLeft = MAX_SWIPES;
-  saveToStorage('momentum_swipes_left', {count: swLeft, timestamp: Date.now()});
+  saveToStorage('momentum_swipes_left', {count: swLeft, date: getLocalDateStr()});
   applyPremiumState();
   updateSwipeCounter();
   toast('Subscription cancelled. You have 10 swipes remaining today.');
 }
 
+// ── VIDEO FEED — TIKTOK ENGINE ───────────────────────────────────────────────
+const VIDEO_DB = {
+  linkedin: [
+    {type:'howto',title:'How to Write a LinkedIn Headline That Gets Recruiters to DM You',channel:'Jeff Su',views:'1.2M',dur:'8:24',emoji:'💼',match:'Your LinkedIn challenge',color:'#0a1628'},
+    {type:'tips',title:'The LinkedIn Profile Mistake 90% of Students Make',channel:'Austin Belcak',views:'840K',dur:'11:02',emoji:'🎯',match:'Matches your current step',color:'#0d1a2e'},
+    {type:'motivation',title:'How I Got 3 Job Offers in 2 Weeks Using LinkedIn',channel:'Maddie Dewald',views:'2.1M',dur:'14:38',emoji:'🚀',match:'Success story',color:'#0a2016'},
+    {type:'howto',title:'LinkedIn Cold Messaging That Actually Gets Replies',channel:'Self Made Millennial',views:'650K',dur:'9:17',emoji:'📨',match:'Step 4 tip',color:'#1a0d28'},
+  ],
+  detailing: [
+    {type:'howto',title:'How I Started a Car Detailing Business with $200',channel:'The Detail Geek',views:'3.4M',dur:'18:52',emoji:'🚗',match:'Your active challenge',color:'#1a0d00'},
+    {type:'tips',title:'Best Products for a Mobile Detailing Business in 2025',channel:'Pan The Organizer',views:'890K',dur:'12:14',emoji:'🧴',match:'Buying supplies step',color:'#0d1a0d'},
+    {type:'stories',title:'$8,000/Month Detailing Cars at 19  -  Full Story',channel:'Starter Story',views:'1.6M',dur:'22:10',emoji:'💰',match:'Success story',color:'#1a1000'},
+  ],
+  excel: [
+    {type:'howto',title:'Excel Full Course for Beginners  -  MO-201 Prep',channel:'Kevin Stratvert',views:'5.2M',dur:'2:14:00',emoji:'📊',match:'MO-201 prep',color:'#001a0d'},
+    {type:'tips',title:'Top 10 Excel Functions You MUST Know for the Exam',channel:'Leila Gharani',views:'2.8M',dur:'16:44',emoji:'✅',match:'Exam prep tips',color:'#0d1a00'},
+    {type:'howto',title:'How I Passed the Excel MO-201 Exam First Try',channel:'MyExcelOnline',views:'410K',dur:'9:58',emoji:'🏆',match:'Exam strategy',color:'#1a1400'},
+  ],
+  default: [
+    {type:'motivation',title:'The Science of Building Better Habits',channel:'Thomas Frank',views:'3.9M',dur:'16:28',emoji:'🧠',match:'Challenge mindset',color:'#0d0d1a'},
+    {type:'tips',title:'How Successful People Structure Their Day',channel:'Ali Abdaal',views:'5.6M',dur:'19:45',emoji:'⚡',match:'Productivity',color:'#1a0d0d'},
+     {type:'stories',title:'30 Challenges in 30 Days - Full Story',channel:'Matt D.Avella',views:'7.2M',dur:'14:12',emoji:'🎯',match:'Challenge inspiration',color:'#0d1a1a'},
+    {type:'howto',title:'How to Stay Motivated When You Want to Quit',channel:'Mark Manson',views:'2.4M',dur:'10:18',emoji:'🔥',match:'Keeping momentum',color:'#1a0a00'},
+    {type:'motivation',title:'Why Most People Never Finish What They Start',channel:'Struthless',views:'4.1M',dur:'12:33',emoji:'💡',match:'Finishing strong',color:'#0a001a'},
+  ],
+};
+
+function getVideosForChallenge(){
+  if(!activeTask) return [...VIDEO_DB.default];
+  const id=activeTask.id||'';
+  const cat=(activeTask.cat||'').toLowerCase();
+  let vids=[];
+  if(id.includes('linkedin')||cat.includes('professional')) vids=VIDEO_DB.linkedin;
+  else if(id.includes('detail')||id.includes('car')) vids=VIDEO_DB.detailing;
+  else if(id.includes('excel')||id.includes('mo-201')) vids=VIDEO_DB.excel;
+  else vids=VIDEO_DB.default;
+  return [...vids,...VIDEO_DB.default.slice(0,2)];
+}
+
+// ── TIKTOK ENGINE ─────────────────────────────────────────────────────────────
+let tkIdx=0;
+let tkVideos=[];
+let tkDragStartY=0,tkDragging=false,tkDelta=0;
+
+const CHANNEL_INITIALS={
+  'Jeff Su':'JS','Austin Belcak':'AB','Maddie Dewald':'MD',
+  'Self Made Millennial':'SM','The Detail Geek':'DG','Pan The Organizer':'PO',
+  'Starter Story':'SS','Kevin Stratvert':'KS','Leila Gharani':'LG',
+  'MyExcelOnline':'MO','Thomas Frank':'TF','Ali Abdaal':'AA',
+  "Matt D.Avella":'MD','Mark Manson':'MM','Struthless':'ST'
+};
+const CHANNEL_COLORS=['#1B3F72','#7B4FD0','#1A6B4A','#C9973A','#A02020','#2558A8','#4a1d8a'];
+
+function renderVideoFeed(){
+  tkVideos=getVideosForChallenge();
+  tkIdx=0;
+  buildTkSlides();
+  updateTkDots();
+  updateTkActions();
+  bindTkSwipe();
+}
+
+function buildTkSlides(){
+  const container=document.getElementById('tk-container');
+  if(!container) return;
+  container.innerHTML=tkVideos.map((v,i)=>{
+    const initials=CHANNEL_INITIALS[v.channel]||(v.channel.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase());
+    const color=CHANNEL_COLORS[i%CHANNEL_COLORS.length];
+    const translateY = (i-tkIdx)*100;
+    return `<div class="tiktok-slide" id="tk-slide-${i}" style="transform:translateY(${translateY}%);background:${v.color||'#0a0a0a'}">
+      <div class="tiktok-bg">
+        <div class="tiktok-bg-emoji">${v.emoji}</div>
+      </div>
+      <div class="tiktok-gradient"></div>
+      <div class="tiktok-content">
+        <div class="tiktok-tag">${typeLabel(v.type)}</div>
+        <div class="tiktok-title">${v.title}</div>
+        <div class="tiktok-channel">
+          <div class="tiktok-av" style="background:linear-gradient(135deg,${color},${color}aa)">${initials}</div>
+          <div>
+            <div class="tiktok-channel-name">${v.channel} · ${v.views} views · ${v.dur}</div>
+            <div class="tiktok-match">✦ ${v.match}</div>
+          </div>
+        </div>
+        <button class="tiktok-watch-btn" onclick="openVideo('${encodeURIComponent(v.title)}','${v.channel}')">
+          <span style="font-size:16px">▶</span> Watch on YouTube
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function goTkSlide(newIdx){
+  if(newIdx<0||newIdx>=tkVideos.length) return;
+  const oldIdx=tkIdx;
+  tkIdx=newIdx;
+  // Animate slides
+  tkVideos.forEach((_,i)=>{
+    const slide=document.getElementById('tk-slide-'+i);
+    if(slide){
+      slide.style.transition='transform .38s cubic-bezier(.4,0,.2,1)';
+      slide.style.transform=`translateY(${(i-tkIdx)*100}%)`;
+    }
+  });
+  updateTkDots();
+  updateTkActions();
+}
+
+function updateTkDots(){
+  const dots=document.getElementById('tk-dots');
+  if(!dots) return;
+  const max=Math.min(tkVideos.length,7);
+  dots.innerHTML=Array.from({length:max},(_,i)=>{
+    const h=i===tkIdx?20:6;
+    return `<div class="tiktok-dot ${i===tkIdx?'active':''}" style="height:${h}px"></div>`;
+  }).join('');
+}
+
+function updateTkActions(){
+  const v=tkVideos[tkIdx];
+  if(!v) return;
+  const likes=['4.2k','1.8k','3.1k','890','6.7k','2.4k','5.1k'];
+  const lbl=document.getElementById('tk-like-lbl');
+  if(lbl) lbl.textContent=likes[tkIdx%likes.length];
+  const ico=document.getElementById('tk-like-ico');
+  if(ico) ico.classList.remove('liked');
+}
+
+let _tkLiked={};
+function tkLike(el){
+  const ico=el.querySelector('.tiktok-act-ico');
+  const lbl=el.querySelector('.tiktok-act-lbl');
+  const key='like-'+tkIdx;
+  if(_tkLiked[key]){
+    _tkLiked[key]=false;
+    ico.classList.remove('liked');
+    ico.style.transform='scale(1)';
+  } else {
+    _tkLiked[key]=true;
+    ico.classList.add('liked');
+    ico.style.transform='scale(1.3)';
+    setTimeout(()=>ico.style.transform='scale(1)',200);
+  }
+}
+
+function tkSave(){
+  toast('🔖 Saved to your list!');
+}
+function tkChallenge(){
+  toast('⚡ Challenge added to your deck!');
+}
+
+function openVideo(title,channel){
+  const q=encodeURIComponent(decodeURIComponent(title)+' '+channel);
+  window.open('https://www.youtube.com/results?search_query='+q,'_blank');
+}
+
+function typeLabel(type){
+  return {howto:'HOW-TO',motivation:'MOTIVATION',stories:'SUCCESS STORY',tips:'TIPS & TRICKS'}[type]||type.toUpperCase();
+}
+
+function bindTkSwipe(){
+  const feed=document.getElementById('tiktok-feed');
+  if(!feed||feed._tkBound) return;
+  feed._tkBound=true;
+
+  // Touch
+  feed.addEventListener('touchstart',e=>{
+    tkDragStartY=e.touches[0].clientY;
+    tkDragging=true;
+    tkDelta=0;
+  },{passive:true});
+  feed.addEventListener('touchmove',e=>{
+    if(!tkDragging) return;
+    tkDelta=tkDragStartY-e.touches[0].clientY;
+    // Live drag feedback
+    tkVideos.forEach((_,i)=>{
+      const slide=document.getElementById('tk-slide-'+i);
+      if(slide){
+        slide.style.transition='none';
+        slide.style.transform=`translateY(calc(${(i-tkIdx)*100}% - ${tkDelta}px))`;
+      }
+    });
+  },{passive:true});
+  feed.addEventListener('touchend',()=>{
+    tkDragging=false;
+    if(tkDelta>60) goTkSlide(tkIdx+1);
+    else if(tkDelta<-60) goTkSlide(tkIdx-1);
+    else goTkSlide(tkIdx); // snap back
+  },{passive:true});
+
+  // Mouse wheel
+  let _wheelLock=false;
+  feed.addEventListener('wheel',e=>{
+    e.preventDefault();
+    if(_wheelLock) return;
+    _wheelLock=true;
+    if(e.deltaY>20) goTkSlide(tkIdx+1);
+    else if(e.deltaY<-20) goTkSlide(tkIdx-1);
+    setTimeout(()=>_wheelLock=false,500);
+  },{passive:false});
+
+  // Keyboard
+  document.addEventListener('keydown',e=>{
+    const active=document.querySelector('.screen.active');
+    if(!active||active.id!=='s-videos') return;
+    if(e.key==='ArrowDown') goTkSlide(tkIdx+1);
+    if(e.key==='ArrowUp') goTkSlide(tkIdx-1);
+  });
+}
+
+function setTikTokTab(tab,btn){
+  document.querySelectorAll('.tiktok-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  renderVideoFeed();
+}
+
+function refreshVideoFeed(){
+  tkIdx=0;
+  renderVideoFeed();
+}
 </script>
 
   <!-- PWA SERVICE WORKER -->
