@@ -28,7 +28,7 @@ export default function LandingScreen({ onDone }) {
       <form onSubmit={handleSignup} style={{display:'flex',flexDirection:'column',gap:14}}>
         <input className="input" type="text" placeholder="Your name" value={name} onChange={e=>setName(e.target.value)} required />
         <input className="input" type="email" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required />
-        <input className="input" type="password" placeholder="Password" value={pass} onChange={e=>setPass(e.target.value)} minLength={6} required />
+        <input className="input" type="password" placeholder="Password (min 6 chars)" value={pass} onChange={e=>setPass(e.target.value)} minLength={6} required />
         <button type="submit" className="btn-primary" style={{marginTop:8}}>Create Account</button>
       </form>
     </div>
@@ -49,7 +49,7 @@ export default function LandingScreen({ onDone }) {
         ))}
       </div>
       <div style={{padding:'0 20px 40px',display:'flex',flexDirection:'column',gap:12}}>
-        <button className="btn-primary" onClick={()=>setMode('signup')}>Get Started — It\'s Free</button>
+        <button className="btn-primary" onClick={()=>setMode('signup')}>Get Started — It's Free</button>
         <button onClick={()=>setMode('login')} style={{background:'none',border:'1.5px solid rgba(255,255,255,.2)',borderRadius:14,padding:14,color:'rgba(255,255,255,.7)',fontFamily:'var(--font-sans)',fontSize:15,fontWeight:600,cursor:'pointer'}}>I already have an account</button>
       </div>
     </div>
